@@ -50,7 +50,7 @@ a {
 }
 
 .hero-main {
-  background: url("../assets/hero-main-background.jpg");
+  background: url("../assets/hero-main-bg.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain 100%;
@@ -87,4 +87,251 @@ a {
   color: #772439;
   max-width: 686px;
   margin: 0 auto;
+}
+
+.about {
+  background-color: #F1F1F2;
+}
+.about .about-grid {
+  display: flex;
+  justify-content: space-between;
+}
+.about .about-grid .about-left-image {
+  display: flex;
+  align-items: flex-end;
+}
+.about .about-grid .about-text {
+  display: flex;
+  align-items: center;
+}
+.about .about-grid .about-text p {
+  font-size: 16px;
+  max-width: 508px;
+}
+.about .about-grid .about-right-image {
+  display: flex;
+  align-items: flex-end;
+}
+
+.books-banner {
+  background: url("../assets/books-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+.details .details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.details .details-grid .details-left {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 300px;
+  background-color: #FFFFFF;
+  color: #772439;
+}
+.details .details-grid .details-left h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 24px;
+  margin-right: 50px;
+}
+.details .details-grid .details-left p {
+  font-size: 16px;
+  max-width: 330px;
+  margin-right: 50px;
+}
+.details .details-grid .details-right {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 300px;
+  background-color: #772439;
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+.details .details-grid .details-right h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 24px;
+  margin-left: 50px;
+}
+.details .details-grid .details-right p {
+  font-size: 16px;
+  max-width: 330px;
+  margin-left: 50px;
+}
+.details .details-grid .details-right img {
+  position: absolute;
+  bottom: 0;
+  left: 400px;
+}
+
+.features .features-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.features .features-grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+.features .features-grid > div .feature-title {
+  font-family: "Inria Serif", serif;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+.features .features-grid .feature-01 {
+  background: url("../assets/feature-01.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.features .features-grid .feature-02 {
+  background: url("../assets/feature-02.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.features .features-grid .feature-03 {
+  background: url("../assets/feature-03.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.features .features-grid .feature-04 {
+  background: url("../assets/feature-04.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.features .features-grid .feature-05 {
+  background: url("../assets/feature-05.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clients {
+  background: url("../assets/clients-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  padding: 30px 0;
+}
+.clients .clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.clients .clients-grid .clients-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients .clients-grid .clients-title h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+.clients .clients-grid .clients-list {
+  font-size: 16px;
+}
+.clients .clients-grid .clients-list p {
+  margin: 0 0 10px 0;
+}
+.clients .clients-grid .clients-list ul {
+  margin: 0;
+}
+.clients .clients-grid .clients-list ul li {
+  margin: 0 0 5px 0;
+}
+.clients .clients-grid .clients-finances {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  align-items: center;
+}
+.clients .clients-grid .clients-finances p {
+  text-align: center;
+  max-width: 236px;
+}
+
+.contact .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact .contact-grid .contact-info {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.contact .contact-grid .contact-info .contact-info-wrapper {
+  max-width: 370px;
+  font-size: 16px;
+  margin-right: 100px;
+}
+.contact .contact-grid .contact-info .contact-info-wrapper .contact-info-highlight {
+  font-weight: bold;
+  color: #772439;
+}
+.contact .contact-grid .contact-info .contact-info-wrapper img {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0 15px 0;
+}
+.contact .contact-grid .contact-map iframe {
+  display: block;
+  width: 100%;
+  height: 380px;
+}
+
+.scope .scope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.scope .scope-grid .scope-left-image {
+  display: flex;
+  align-items: flex-start;
+}
+.scope .scope-grid .scope-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.scope .scope-grid .scope-info h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #772439;
+}
+.scope .scope-grid .scope-info .scope-info-wrapper {
+  font-size: 16px;
+}
+.scope .scope-grid .scope-info .scope-info-wrapper p {
+  margin: 0 0 10px 0;
+}
+.scope .scope-grid .scope-info .scope-info-wrapper ul {
+  margin: 0;
+}
+.scope .scope-grid .scope-info .scope-info-wrapper ul li {
+  margin: 0 0 5px 0;
+}
+.scope .scope-grid .scope-right-image {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/footer-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 481px;
 }/*# sourceMappingURL=style.css.map */
