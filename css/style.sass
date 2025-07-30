@@ -44,13 +44,34 @@ a
     width: 100%
     height: 60px
     background: rgba(0, 0, 0, 0.25)
+    @include mobile
+        background-color: #772439
     .container
         display: flex
         justify-content: right
+        @include mobile
+            padding: 0 20px
+        .navbar-main-mobile-grid
+            display: none
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            @include mobile
+                display: flex
+            .navbar-main-mobile-burger
+                width: 30px
+                cursor: pointer
+                .navbar-main-mobile-burger-line
+                    width: 100%
+                    height: 2px
+                    background-color: #fff
+                    margin-bottom: 5px
         ul
             list-style: none
             padding: 0
             margin: 0
+            @include mobile
+                display: none
             li
                 display: inline-block
                 margin-right: 60px
@@ -70,43 +91,51 @@ a
     background-size: contain 100%
     min-height: 810px
     @include mobile
-        min-height: 600px
+        background-position: center
+        background-size: cover
+        min-height: 350px
     .container
         max-width: 1440px
         padding: 0 100px 0 200px
         @include mobile
-            padding: 0 20px
+            padding: 0 30px
     .hero-main-grid
         display: grid
         grid-template-columns: 40% 60%
-        @include mobile
-            grid-template-columns: 1fr
         padding-top: 200px
         box-sizing: border-box
         @include mobile
-            padding-top: 160px
+            grid-template-columns: 1fr 1fr
+            padding-top: 130px
         .hero-main-logo
             @include mobile
-                text-align: center
                 img
-                    width: 200px
+                    width: 56px
                     height: auto
         .hero-main-title
             display: flex
             align-items: center
+            @include mobile
+                    display: none
             h1
                 font-size: 24px
                 font-weight: 500
                 color: #fff
-                @include mobile
-                    font-size: 18px
-                    text-align: center
+        .hero-main-title-mobile
+            display: none
+            @include mobile
+                display: block
+            h1
+                font-size: 12px
+                font-weight: 500
+                color: #fff
+                max-width: 100px
 
 .about-banner
     background-color: #fff
     padding: 80px 0
     @include mobile
-        padding: 60px 20px
+        padding: 80px 20px
     p
         @include inriaSerif()
         font-size: 24px
@@ -115,7 +144,8 @@ a
         max-width: 686px
         margin: 0 auto
         @include mobile
-            font-size: 18px
+            font-size: 12px
+            max-width: 210px
 
 .about
     background-color: #F1F1F2
@@ -129,16 +159,20 @@ a
             align-items: flex-end
             @include mobile
                 img
-                    width: 100%
+                    width: 240px
                     height: auto
         .about-text
             display: flex
             align-items: center
             @include mobile
-                padding: 40px 20px
+                padding: 60px 0 20px 0
             p
                 font-size: 16px
                 max-width: 508px
+                @include mobile
+                    font-size: 12px
+                    max-width: 246px
+                    margin: 0 auto
         .about-right-image
             display: flex
             align-items: flex-end
@@ -151,6 +185,9 @@ a
     background: url('../assets/books-bg.jpg')
     @include backgroundCover()
     height: 200px
+    @include mobile
+        background: url('../assets/books-bg-mobile.jpg')
+        height: 250px
 
 .details
     .details-grid
@@ -168,7 +205,9 @@ a
             @include mobile
                 flex-direction: column
                 justify-content: center
-                padding: 0 20px
+                align-items: flex-start
+                min-height: 250px
+                padding: 0 60px
             h2
                 @include inriaSerif()
                 font-size: 24px
@@ -176,12 +215,13 @@ a
                 margin-right: 50px
                 @include mobile
                     margin-right: 0
-                    margin-bottom: 30px
+                    margin-bottom: 10px
             p
                 font-size: 16px
                 max-width: 330px
                 margin-right: 50px
                 @include mobile
+                    font-size: 12px
                     margin-right: 0
         .details-right
             position: relative
@@ -195,7 +235,9 @@ a
             @include mobile
                 flex-direction: column
                 justify-content: center
-                padding: 0 20px
+                align-items: flex-start
+                min-height: 250px
+                padding: 0 60px
             h2
                 @include inriaSerif()
                 font-size: 24px
@@ -203,17 +245,20 @@ a
                 margin-left: 50px
                 @include mobile
                     margin-left: 0
-                    margin-bottom: 30px
+                    margin-bottom: 10px
             p
                 font-size: 16px
                 max-width: 330px
                 margin-left: 50px
                 @include mobile
+                    font-size: 12px
                     margin-left: 0
             img
                 position: absolute
                 bottom: 0
-                left: 400px
+                right: 0
+                width: 170px
+                height: auto
 
 .features
     .features-grid
@@ -231,28 +276,29 @@ a
                 font-size: 24px
                 color: #FFFFFF
         .feature-01
-            background: url('../assets/feature-01.png'), linear-gradient(to left, rgba(rgb(30, 30, 30), 0.99), rgba(rgb(30, 30, 30), 0.99))
+            background: linear-gradient(to left, rgba(rgb(30, 30, 30), 0.5), rgba(rgb(30, 30, 30), 0.5)), url('../assets/feature-01.png')
             @include backgroundCover()
         .feature-02
-            background: url('../assets/feature-02.png'), linear-gradient(to left, rgba(rgb(30, 30, 30), 0.99), rgba(rgb(30, 30, 30), 0.99))
+            background: linear-gradient(to left, rgba(rgb(30, 30, 30), 0.5), rgba(rgb(30, 30, 30), 0.5)),url('../assets/feature-02.png')
             @include backgroundCover()
         .feature-03
-            background: url('../assets/feature-03.png'), linear-gradient(to left, rgba(rgb(30, 30, 30), 0.99), rgba(rgb(30, 30, 30), 0.99))
+            background: linear-gradient(to left, rgba(rgb(30, 30, 30), 0.5), rgba(rgb(30, 30, 30), 0.5)), url('../assets/feature-03.png')
             @include backgroundCover()
         .feature-04
-            background: url('../assets/feature-04.png'), linear-gradient(to left, rgba(rgb(30, 30, 30), 0.99), rgba(rgb(30, 30, 30), 0.99))
+            background: linear-gradient(to left, rgba(rgb(30, 30, 30), 0.5), rgba(rgb(30, 30, 30), 0.5)), url('../assets/feature-04.png')
             @include backgroundCover()
         .feature-05
-            background: url('../assets/feature-05.png'), linear-gradient(to left, rgba(rgb(30, 30, 30), 0.99), rgba(rgb(30, 30, 30), 0.99))
+            background: linear-gradient(to left, rgba(rgb(30, 30, 30), 0.5), rgba(rgb(30, 30, 30), 0.5)), url('../assets/feature-05.png')
             @include backgroundCover()
 
 .clients
     background: url('../assets/clients-bg.jpg')
     @include backgroundCover()
+    background-attachment: fixed
     color: #FFFFFF
     padding: 40px 0
     @include mobile
-        padding: 40px 20px
+        padding: 60px 40px
     .clients-grid
         display: grid
         grid-template-columns: repeat(3, 1fr)
@@ -263,7 +309,8 @@ a
             justify-content: center
             align-items: center
             @include mobile
-                margin-bottom: 30px
+                justify-content: left
+                margin-bottom: 20px
             h2
                 @include inriaSerif()
                 font-size: 24px
@@ -298,13 +345,15 @@ a
             justify-content: right
             align-items: center
             @include mobile
-                padding: 40px 20px
+                padding: 60px 0
             .contact-info-wrapper
                 max-width: 370px
                 font-size: 16px
                 margin-right: 100px
                 @include mobile
+                    max-width: 244px
                     margin-right: 0
+                    margin: 0 auto
                 .contact-info-highlight
                     font-weight: bold
                     color: #772439
@@ -317,6 +366,8 @@ a
                 display: block
                 width: 100%
                 height: 380px
+                @include mobile
+                    height: 230px
 
 .scope
     .scope-grid
@@ -329,7 +380,7 @@ a
             align-items: flex-start
             @include mobile
                 img
-                    width: 100%
+                    width: 240px
                     height: auto
         .scope-info
             display: flex
@@ -337,14 +388,14 @@ a
             align-items: center
             @include mobile
                 display: block
-                padding: 40px 20px
+                padding: 30px 60px
             h2
                 @include inriaSerif()
                 font-size: 24px
                 font-weight: 400
                 color: #772439
                 @include mobile
-                    margin-bottom: 30px
+                    margin-bottom: 10px
             .scope-info-wrapper
                 font-size: 16px
                 p
@@ -357,9 +408,16 @@ a
             display: flex
             align-items: flex-start
             @include mobile
+                background: url('../assets/scope-right.png')
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: bottom right
+                height: 326px
                 img
                     width: 100%
                     height: auto
+                    @include mobile
+                        display: none
 
 .footer-main
     display: flex
@@ -368,3 +426,5 @@ a
     background: url('../assets/footer-bg.jpg')
     @include backgroundCover()
     height: 481px
+    @include mobile
+       height: 250px 

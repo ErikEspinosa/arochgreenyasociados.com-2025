@@ -30,14 +30,50 @@ a {
   height: 60px;
   background: rgba(0, 0, 0, 0.25);
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar-main {
+    background-color: #772439;
+  }
+}
 .navbar-main .container {
   display: flex;
   justify-content: right;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar-main .container {
+    padding: 0 20px;
+  }
+}
+.navbar-main .container .navbar-main-mobile-grid {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar-main .container .navbar-main-mobile-grid {
+    display: flex;
+  }
+}
+.navbar-main .container .navbar-main-mobile-grid .navbar-main-mobile-burger {
+  width: 30px;
+  cursor: pointer;
+}
+.navbar-main .container .navbar-main-mobile-grid .navbar-main-mobile-burger .navbar-main-mobile-burger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 5px;
 }
 .navbar-main .container ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar-main .container ul {
+    display: none;
+  }
 }
 .navbar-main .container ul li {
   display: inline-block;
@@ -68,7 +104,9 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .hero-main {
-    min-height: 600px;
+    background-position: center;
+    background-size: cover;
+    min-height: 350px;
   }
 }
 .hero-main .container {
@@ -77,7 +115,7 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .hero-main .container {
-    padding: 0 20px;
+    padding: 0 30px;
   }
 }
 .hero-main .hero-main-grid {
@@ -88,20 +126,13 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .hero-main .hero-main-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 130px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .hero-main .hero-main-grid {
-    padding-top: 160px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .hero-main .hero-main-grid .hero-main-logo {
-    text-align: center;
-  }
   .hero-main .hero-main-grid .hero-main-logo img {
-    width: 200px;
+    width: 56px;
     height: auto;
   }
 }
@@ -109,16 +140,29 @@ a {
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .hero-main .hero-main-grid .hero-main-title {
+    display: none;
+  }
+}
 .hero-main .hero-main-grid .hero-main-title h1 {
   font-size: 24px;
   font-weight: 500;
   color: #fff;
 }
+.hero-main .hero-main-grid .hero-main-title-mobile {
+  display: none;
+}
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .hero-main .hero-main-grid .hero-main-title h1 {
-    font-size: 18px;
-    text-align: center;
+  .hero-main .hero-main-grid .hero-main-title-mobile {
+    display: block;
   }
+}
+.hero-main .hero-main-grid .hero-main-title-mobile h1 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  max-width: 100px;
 }
 
 .about-banner {
@@ -127,7 +171,7 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .about-banner {
-    padding: 60px 20px;
+    padding: 80px 20px;
   }
 }
 .about-banner p {
@@ -140,7 +184,8 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .about-banner p {
-    font-size: 18px;
+    font-size: 12px;
+    max-width: 210px;
   }
 }
 
@@ -162,7 +207,7 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .about .about-grid .about-left-image img {
-    width: 100%;
+    width: 240px;
     height: auto;
   }
 }
@@ -172,12 +217,19 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .about .about-grid .about-text {
-    padding: 40px 20px;
+    padding: 60px 0 20px 0;
   }
 }
 .about .about-grid .about-text p {
   font-size: 16px;
   max-width: 508px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .about .about-grid .about-text p {
+    font-size: 12px;
+    max-width: 246px;
+    margin: 0 auto;
+  }
 }
 .about .about-grid .about-right-image {
   display: flex;
@@ -196,6 +248,12 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .books-banner {
+    background: url("../assets/books-bg-mobile.jpg");
+    height: 250px;
+  }
 }
 
 .details .details-grid {
@@ -219,7 +277,9 @@ a {
   .details .details-grid .details-left {
     flex-direction: column;
     justify-content: center;
-    padding: 0 20px;
+    align-items: flex-start;
+    min-height: 250px;
+    padding: 0 60px;
   }
 }
 .details .details-grid .details-left h2 {
@@ -231,7 +291,7 @@ a {
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .details .details-grid .details-left h2 {
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
 .details .details-grid .details-left p {
@@ -241,6 +301,7 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .details .details-grid .details-left p {
+    font-size: 12px;
     margin-right: 0;
   }
 }
@@ -258,7 +319,9 @@ a {
   .details .details-grid .details-right {
     flex-direction: column;
     justify-content: center;
-    padding: 0 20px;
+    align-items: flex-start;
+    min-height: 250px;
+    padding: 0 60px;
   }
 }
 .details .details-grid .details-right h2 {
@@ -270,7 +333,7 @@ a {
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .details .details-grid .details-right h2 {
     margin-left: 0;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
 .details .details-grid .details-right p {
@@ -280,13 +343,16 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .details .details-grid .details-right p {
+    font-size: 12px;
     margin-left: 0;
   }
 }
 .details .details-grid .details-right img {
   position: absolute;
   bottom: 0;
-  left: 400px;
+  right: 0;
+  width: 170px;
+  height: auto;
 }
 
 .features .features-grid {
@@ -310,31 +376,31 @@ a {
   color: #FFFFFF;
 }
 .features .features-grid .feature-01 {
-  background: url("../assets/feature-01.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background: linear-gradient(to left, rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url("../assets/feature-01.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .features .features-grid .feature-02 {
-  background: url("../assets/feature-02.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background: linear-gradient(to left, rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url("../assets/feature-02.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .features .features-grid .feature-03 {
-  background: url("../assets/feature-03.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background: linear-gradient(to left, rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url("../assets/feature-03.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .features .features-grid .feature-04 {
-  background: url("../assets/feature-04.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background: linear-gradient(to left, rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url("../assets/feature-04.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .features .features-grid .feature-05 {
-  background: url("../assets/feature-05.png"), linear-gradient(to left, rgba(30, 30, 30, 0.99), rgba(30, 30, 30, 0.99));
+  background: linear-gradient(to left, rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url("../assets/feature-05.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -345,12 +411,13 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   color: #FFFFFF;
   padding: 40px 0;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .clients {
-    padding: 40px 20px;
+    padding: 60px 40px;
   }
 }
 .clients .clients-grid {
@@ -369,7 +436,8 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .clients .clients-grid .clients-title {
-    margin-bottom: 30px;
+    justify-content: left;
+    margin-bottom: 20px;
   }
 }
 .clients .clients-grid .clients-title h2 {
@@ -421,7 +489,7 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .contact .contact-grid .contact-info {
-    padding: 40px 20px;
+    padding: 60px 0;
   }
 }
 .contact .contact-grid .contact-info .contact-info-wrapper {
@@ -431,7 +499,9 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .contact .contact-grid .contact-info .contact-info-wrapper {
+    max-width: 244px;
     margin-right: 0;
+    margin: 0 auto;
   }
 }
 .contact .contact-grid .contact-info .contact-info-wrapper .contact-info-highlight {
@@ -447,6 +517,11 @@ a {
   display: block;
   width: 100%;
   height: 380px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact .contact-grid .contact-map iframe {
+    height: 230px;
+  }
 }
 
 .scope .scope-grid {
@@ -464,7 +539,7 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .scope .scope-grid .scope-left-image img {
-    width: 100%;
+    width: 240px;
     height: auto;
   }
 }
@@ -476,7 +551,7 @@ a {
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .scope .scope-grid .scope-info {
     display: block;
-    padding: 40px 20px;
+    padding: 30px 60px;
   }
 }
 .scope .scope-grid .scope-info h2 {
@@ -487,7 +562,7 @@ a {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .scope .scope-grid .scope-info h2 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
 .scope .scope-grid .scope-info .scope-info-wrapper {
@@ -507,9 +582,21 @@ a {
   align-items: flex-start;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
+  .scope .scope-grid .scope-right-image {
+    background: url("../assets/scope-right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    height: 326px;
+  }
   .scope .scope-grid .scope-right-image img {
     width: 100%;
     height: auto;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (min-width: 320px) and (max-width: 480px) {
+  .scope .scope-grid .scope-right-image img {
+    display: none;
   }
 }
 
@@ -522,4 +609,9 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   height: 481px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .footer-main {
+    height: 250px;
+  }
 }/*# sourceMappingURL=style.css.map */
