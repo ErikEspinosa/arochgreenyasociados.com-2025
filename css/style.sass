@@ -66,15 +66,19 @@ a
                     height: 2px
                     background-color: #fff
                     margin-bottom: 5px
-        ul
+        .navbar-main-menu
             list-style: none
             padding: 0
             margin: 0
             @include mobile
                 display: none
-            li
+            .navbar-main-menu-item
                 display: inline-block
                 margin-right: 60px
+                &:hover 
+                    .navbar-main-submenu
+                        opacity: 1
+                        visibility: visible
                 @include mobile
                     margin-right: 20px
                 a
@@ -83,6 +87,20 @@ a
                     color: #fff
                     @include mobile
                         font-size: 16px
+                .navbar-main-submenu
+                    opacity: 0
+                    visibility: hidden
+                    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
+                    position: absolute
+                    background-color: #772439
+                    list-style: none
+                    padding: 10px 20px
+                    margin: 0
+                    .navbar-main-submenu-item
+                        margin-bottom: 12px
+                        a
+                            font-size: 18px
+                            font-weight: 500
 
 .hero-main
     background: url('../assets/hero-main-bg.jpg')

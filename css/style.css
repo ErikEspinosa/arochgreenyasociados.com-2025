@@ -65,34 +65,55 @@ a {
   background-color: #fff;
   margin-bottom: 5px;
 }
-.navbar-main .container ul {
+.navbar-main .container .navbar-main-menu {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .navbar-main .container ul {
+  .navbar-main .container .navbar-main-menu {
     display: none;
   }
 }
-.navbar-main .container ul li {
+.navbar-main .container .navbar-main-menu .navbar-main-menu-item {
   display: inline-block;
   margin-right: 60px;
 }
+.navbar-main .container .navbar-main-menu .navbar-main-menu-item:hover .navbar-main-submenu {
+  opacity: 1;
+  visibility: visible;
+}
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .navbar-main .container ul li {
+  .navbar-main .container .navbar-main-menu .navbar-main-menu-item {
     margin-right: 20px;
   }
 }
-.navbar-main .container ul li a {
+.navbar-main .container .navbar-main-menu .navbar-main-menu-item a {
   font-size: 20px;
   font-weight: 500;
   color: #fff;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .navbar-main .container ul li a {
+  .navbar-main .container .navbar-main-menu .navbar-main-menu-item a {
     font-size: 16px;
   }
+}
+.navbar-main .container .navbar-main-menu .navbar-main-menu-item .navbar-main-submenu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  position: absolute;
+  background-color: #772439;
+  list-style: none;
+  padding: 10px 20px;
+  margin: 0;
+}
+.navbar-main .container .navbar-main-menu .navbar-main-menu-item .navbar-main-submenu .navbar-main-submenu-item {
+  margin-bottom: 12px;
+}
+.navbar-main .container .navbar-main-menu .navbar-main-menu-item .navbar-main-submenu .navbar-main-submenu-item a {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .hero-main {
