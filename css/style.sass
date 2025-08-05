@@ -483,4 +483,160 @@ a
     @include backgroundCover()
     height: 481px
     @include mobile
-       height: 250px 
+       height: 250px
+
+.lawyer-hero
+    .lawyer-hero-grid
+        display: grid
+        grid-template-columns: 55% 45%
+        margin-top: 100px
+        min-height: 350px
+        @include mobile
+            grid-template-columns: 1fr
+            margin-top: 60px
+        .lawyer-hero-left
+            background: url('../assets/lawyers/maria-rocha.png')
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: bottom left
+            padding: 40px 0 0 220px
+            @include mobile
+                min-height: 160px
+                padding: 40px 0 0 150px
+            #lawyer-hero-name
+                @include inriaSerif()
+                font-size: 36px
+                font-weight: 400
+                color: #772439
+                line-height: normal
+                margin: 0 0 5px 0
+                @include mobile
+                    font-size: 15px
+                    max-width: 130px
+            #lawyer-hero-email
+                font-size: 16px
+                margin: 0
+                @include mobile
+                    font-size: 10px
+        .lawyer-hero-right
+            padding: 20px 0 0 0
+            @include mobile
+                padding: 40px
+            h2
+                @include inriaSerif()
+                font-size: 32px
+                font-weight: 400
+                color: #772439
+                line-height: normal
+                margin: 0 0 15px 0
+                @include mobile
+                    font-size: 20px
+            #lawyer-hero-academic
+                margin: 0
+                padding: 0 0 0 25px
+                li
+                    font-size: 16px
+                    margin-bottom: 6px
+                    @include mobile
+                        font-size: 12px
+
+.lawyer-professional-experience
+    padding: 50px 0
+    background: url('../assets/lawyer-professional-experience-bg.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    .lawyer-professional-experience-wrapper
+        max-width: 679px
+        margin: 0 auto
+        @include mobile
+            max-width: 244px
+        h2
+            @include inriaSerif()
+            font-size: 32px
+            font-weight: 400
+            color: #772439
+            line-height: normal
+            margin: 0 0 15px 0
+            @include mobile
+                font-size: 20px
+        .lawyer-professional-experience-list
+            margin: 0
+            padding: 0 0 0 25px
+            li
+                font-size: 16px
+                margin-bottom: 6px
+                @include mobile
+                    font-size: 12px
+
+.lawyer-languages
+    padding: 40px 0
+    background: url('../assets/lawyer-languages-bg.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    .lawyer-languages-grid
+        display: flex
+        justify-content: left
+        align-content: center
+        max-width: 679px
+        margin: 0 auto
+        @include mobile
+            display: block
+            max-width: 244px
+        h2
+            @include inriaSerif()
+            font-size: 32px
+            font-weight: 400
+            color: #FFF
+            line-height: normal
+            width: 170px
+            margin: 0
+            @include mobile
+                font-size: 20px
+                margin-bottom: 10px
+        .lawyer-languages-list
+            margin: 0
+            padding: 0 0 0 20px
+            li
+                font-size: 16px
+                color: #FFF
+                margin-bottom: 6px
+
+.laywer-additional-studies
+    padding: 60px 0
+    background: url('../assets/laywer-additional-studies-bg.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    .laywer-additional-studies-wrapper
+        max-width: 679px
+        margin: 0 auto
+        @include mobile
+            max-width: 244px
+        h2
+            @include inriaSerif()
+            font-size: 32px
+            font-weight: 400
+            color: #FFF
+            line-height: normal
+            margin: 0 0 15px 0
+            @include mobile
+                font-size: 20px
+        .laywer-additional-studies-list
+            margin: 0
+            padding: 0 0 0 25px
+            @include mobile
+                padding: 0 0 0 20px
+            li
+                font-size: 16px
+                margin-bottom: 6px
+                color: #FFF
+                @include mobile
+                    font-size: 12px
+
+
+
+                
+
+
