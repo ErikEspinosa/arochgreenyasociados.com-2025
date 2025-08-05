@@ -901,4 +901,164 @@ a {
   .laywer-additional-studies .laywer-additional-studies-wrapper .laywer-additional-studies-list li {
     font-size: 12px;
   }
+}
+
+.admin-hero .admin-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 350px;
+  margin-top: 60px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-hero .admin-hero-grid {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+}
+.admin-hero .admin-hero-grid .admin-hero-left {
+  display: flex;
+  align-items: flex-end;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-hero .admin-hero-grid .admin-hero-left {
+    padding: 20px 20px 0 20px;
+  }
+  .admin-hero .admin-hero-grid .admin-hero-left img {
+    width: 100%;
+    height: auto;
+  }
+}
+.admin-hero .admin-hero-grid .admin-hero-right {
+  padding: 40px 0 0 40px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-hero .admin-hero-grid .admin-hero-right {
+    padding: 40px;
+  }
+}
+.admin-hero .admin-hero-grid .admin-hero-right h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #772439;
+  line-height: normal;
+  margin: 0 0 15px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-hero .admin-hero-grid .admin-hero-right h2 {
+    font-size: 20px;
+  }
+}
+.admin-hero .admin-hero-grid .admin-hero-right ul {
+  margin: 0;
+  padding: 0 0 0 50px;
+}
+.admin-hero .admin-hero-grid .admin-hero-right ul li {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-hero .admin-hero-grid .admin-hero-right ul li {
+    font-size: 12px;
+  }
+}
+
+.admin-functions {
+  padding: 50px 0;
+  background: url("../assets/admin-functions-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.admin-functions .admin-functions-wrapper {
+  max-width: 679px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-functions .admin-functions-wrapper {
+    max-width: 244px;
+  }
+}
+.admin-functions .admin-functions-wrapper h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #772439;
+  line-height: normal;
+  margin: 0 0 15px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-functions .admin-functions-wrapper h2 {
+    font-size: 20px;
+  }
+}
+.admin-functions .admin-functions-wrapper ul {
+  margin: 0;
+  padding: 0 0 0 25px;
+}
+.admin-functions .admin-functions-wrapper ul li {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-functions .admin-functions-wrapper ul li {
+    font-size: 12px;
+  }
+}
+
+.admin-languages {
+  background: url("../assets/admin-languages-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 140px;
+}
+
+.admin-additional-studies {
+  padding: 60px 0;
+  background: url("../assets/admin-additional-studies-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.admin-additional-studies .admin-additional-studies-wrapper {
+  max-width: 679px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-additional-studies .admin-additional-studies-wrapper {
+    max-width: 244px;
+  }
+}
+.admin-additional-studies .admin-additional-studies-wrapper h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #FFF;
+  line-height: normal;
+  margin: 0 0 15px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-additional-studies .admin-additional-studies-wrapper h2 {
+    font-size: 20px;
+  }
+}
+.admin-additional-studies .admin-additional-studies-wrapper ul {
+  margin: 0;
+  padding: 0 0 0 25px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-additional-studies .admin-additional-studies-wrapper ul {
+    padding: 0 0 0 20px;
+  }
+}
+.admin-additional-studies .admin-additional-studies-wrapper ul li {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #FFF;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .admin-additional-studies .admin-additional-studies-wrapper ul li {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */

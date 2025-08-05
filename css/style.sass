@@ -635,8 +635,109 @@ a
                 @include mobile
                     font-size: 12px
 
+.admin-hero
+    .admin-hero-grid
+        display: grid
+        grid-template-columns: 1fr 1fr
+        min-height: 350px
+        margin-top: 60px
+        @include mobile
+            grid-template-columns: 1fr
+            margin-top: 60px
+        .admin-hero-left
+            display: flex
+            align-items: flex-end
+            @include mobile
+                padding: 20px 20px 0 20px
+                img
+                    width: 100%
+                    height: auto
+        .admin-hero-right
+            padding: 40px 0 0 40px
+            @include mobile
+                padding: 40px
+            h2
+                @include inriaSerif()
+                font-size: 32px
+                font-weight: 400
+                color: #772439
+                line-height: normal
+                margin: 0 0 15px 0
+                @include mobile
+                    font-size: 20px
+            ul
+                margin: 0
+                padding: 0 0 0 50px
+                li
+                    font-size: 16px
+                    margin-bottom: 6px
+                    @include mobile
+                        font-size: 12px
 
+.admin-functions
+    padding: 50px 0
+    background: url('../assets/admin-functions-bg.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    .admin-functions-wrapper
+        max-width: 679px
+        margin: 0 auto
+        @include mobile
+            max-width: 244px
+        h2
+            @include inriaSerif()
+            font-size: 32px
+            font-weight: 400
+            color: #772439
+            line-height: normal
+            margin: 0 0 15px 0
+            @include mobile
+                font-size: 20px
+        ul
+            margin: 0
+            padding: 0 0 0 25px
+            li
+                font-size: 16px
+                margin-bottom: 6px
+                @include mobile
+                    font-size: 12px
 
-                
+.admin-languages
+    background: url('../assets/admin-languages-bg.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 140px
 
-
+.admin-additional-studies
+    padding: 60px 0
+    background: url('../assets/admin-additional-studies-bg.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    .admin-additional-studies-wrapper
+        max-width: 679px
+        margin: 0 auto
+        @include mobile
+            max-width: 244px
+        h2
+            @include inriaSerif()
+            font-size: 32px
+            font-weight: 400
+            color: #FFF
+            line-height: normal
+            margin: 0 0 15px 0
+            @include mobile
+                font-size: 20px
+        ul
+            margin: 0
+            padding: 0 0 0 25px
+            @include mobile
+                padding: 0 0 0 20px
+            li
+                font-size: 16px
+                margin-bottom: 6px
+                color: #FFF
+                @include mobile
+                    font-size: 12px
