@@ -105,6 +105,41 @@ a
                             font-size: 18px
                             font-weight: 500
 
+.mobile-menu
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    background-color: #772439
+    z-index: 9999
+    .mobile-menu-header
+        display: flex
+        justify-content: space-between
+        padding: 20px
+        margin-bottom: 20px
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+        .mobile-menu-close
+            cursor: pointer
+    .mobile-menu-items
+        list-style: none
+        margin: 0
+        padding: 20px
+        .mobile-menu-item,
+        .mobile-menu-item > a
+            font-size: 22px
+            font-weight: 500
+            margin: 0 0 10px 0
+            color: #ffff
+        .mobile-menu-subitem
+            margin: 0 0 15px 0
+            a
+                font-size: 18px
+                font-weight: 500
+                color: rgba(255, 255, 255, 0.8)
+
 .hero-main
     background: url('../assets/hero-main-bg.jpg')
     background-position: top center
@@ -429,10 +464,10 @@ a
             display: flex
             align-items: flex-start
             @include mobile
-                background: url('../assets/scope-right.png')
+                background: url('../assets/scope-right-mobile.png')
                 background-repeat: no-repeat
-                background-size: cover
-                background-position: bottom right
+                background-size: 100% auto
+                background-position: center
                 height: 326px
                 img
                     width: 100%

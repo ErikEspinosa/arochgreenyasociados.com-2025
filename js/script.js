@@ -25,3 +25,29 @@ AOS.init({
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
+
+const mobileMenu = document.querySelector('.mobile-menu');
+
+const openMobileMenu = () => {
+  if (mobileMenu) {
+    mobileMenu.style.opacity = 1;
+    mobileMenu.style.visibility = 'visible';
+  }
+}
+
+const closeMobileMenu = () => {
+  if (mobileMenu) {
+    mobileMenu.style.opacity = 0;
+    mobileMenu.style.visibility = 'hidden';
+  }
+}
+
+const mobileMenuBurger = document.querySelector('.navbar-main-mobile-burger');
+mobileMenuBurger && mobileMenuBurger.addEventListener('click', () => {
+  openMobileMenu();
+})
+
+const mobileMenuClose = document.querySelector('.mobile-menu-close');
+mobileMenuClose && mobileMenuClose.addEventListener('click', () => {
+  closeMobileMenu();
+})
