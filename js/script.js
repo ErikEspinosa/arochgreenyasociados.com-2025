@@ -110,7 +110,7 @@ const loadMobileMenuItems = async () => {
 
 const isLawyersPage = () => {
   const { location: { pathname = null } } = window;
-  return pathname === '/abogados.html';
+  return pathname.includes('/abogados.html');
 }
 
 const getQueryParams = () => {
