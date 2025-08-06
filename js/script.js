@@ -127,7 +127,7 @@ const getQueryParam = (param) => {
 
 const loadLawyersInfo = async () => {
   try {
-    const imagesPath = '../assets/lawyers/';
+    const imagesPath = './assets/lawyers/';
     const lawyers = await fetchLawyers();
     const username = getQueryParam('username');
     const lawyer = lawyers.filter(lawyer => lawyer.username === username);
