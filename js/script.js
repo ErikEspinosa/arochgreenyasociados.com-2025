@@ -53,32 +53,25 @@ mobileMenuClose && mobileMenuClose.addEventListener('click', () => {
 })
 
 const loadSubmenuItems = async () => {
-  fetch('../lawyers.json')
-    .then(response => response.json())
-    .then(data => {
-      const lawyers = data.lawyers || null;
-      if (lawyers) {
-        const submenu = document.querySelector('#navbar-main-submenu-lawyers');
-        if (submenu) {
-          lawyers.forEach(element => {
-            const submenuItem = document.createElement('li');
-            submenuItem.classList.add('navbar-main-submenu-item');
-            const submenuAnchor = document.createElement('a');
-            submenuAnchor.textContent = element.shortname;
-            submenuAnchor.setAttribute('href', `./abogados.html?username=${element.username}`);
-            submenuAnchor.setAttribute('title', element.shortname);
-            submenuItem.appendChild(submenuAnchor);
-            submenu.appendChild(submenuItem);
-          });
-        }
-      }
+  try {
+    const submenu = document.querySelector('#navbar-main-submenu-lawyers');
+    const lawyers = await fetchLawyers();
+    lawyers && lawyers.forEach(element => {
+      const submenuItem = document.createElement('li');
+      submenuItem.classList.add('navbar-main-submenu-item');
+      const submenuAnchor = document.createElement('a');
+      submenuAnchor.textContent = element.shortname;
+      submenuAnchor.setAttribute('href', `./abogados.html?username=${element.username}`);
+      submenuAnchor.setAttribute('title', element.shortname);
+      submenuItem.appendChild(submenuAnchor);
+      submenu.appendChild(submenuItem);
     })
-    .catch(error => {
-      console.log("Error trying to get lawyers.json", error);
-    })
+  } catch (error) {
+    console.error('Failed to get lawyers info:', error);
+  }
 }
 
-const loadMenuMobileItems = async () => {
+const loadMobileMenuItems = async () => {
   try {
     const mobileMenuItems = document.querySelector('#mobile-menu-items');
     
@@ -163,7 +156,7 @@ const loadLawyersInfo = async () => {
 
 const fetchLawyers = async () => {
   try {
-    const response = await fetch('../lawyers.json');
+    const response = await fetch('../../lawyers.json');
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({ message: response.statusText }));
       throw new Error(`HTTP error! Status: ${response.status}, Message: ${errorData.message || 'Unknown error'}`);
@@ -178,6 +171,6 @@ const fetchLawyers = async () => {
 
 window.addEventListener('load', () => {
   loadSubmenuItems();
-  loadMenuMobileItems();
+  loadMobileMenuItems();
   isLawyersPage() && loadLawyersInfo();
 })
