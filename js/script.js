@@ -156,7 +156,7 @@ const loadLawyersInfo = async () => {
 
 const fetchLawyers = async () => {
   try {
-    const response = await fetch('../../lawyers.json');
+    const response = await fetch('../js/lawyers.json');
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({ message: response.statusText }));
       throw new Error(`HTTP error! Status: ${response.status}, Message: ${errorData.message || 'Unknown error'}`);
