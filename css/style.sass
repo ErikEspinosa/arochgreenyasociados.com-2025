@@ -123,7 +123,7 @@ a
         border-bottom: 1px solid rgba(255, 255, 255, 0.2)
         .mobile-menu-close
             cursor: pointer
-    .mobile-menu-items
+    #mobile-menu-items
         list-style: none
         margin: 0
         padding: 20px
@@ -495,25 +495,31 @@ a
             grid-template-columns: 1fr
             margin-top: 60px
         .lawyer-hero-left
-            background: url('../assets/lawyers/maria-rocha.png')
-            background-repeat: no-repeat
-            background-size: contain
-            background-position: bottom left
-            padding: 40px 0 0 220px
+            position: relative
+            padding: 40px 0 0 260px
             @include mobile
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 80%, rgba(0, 0, 0, 0.08))
                 min-height: 160px
                 padding: 40px 0 0 150px
-            #lawyer-hero-name
+            #lawyer-image
+                position: absolute
+                bottom: 0
+                left: 0
+                @include mobile
+                    height: 100%
+                    width: auto
+            #lawyer-name
                 @include inriaSerif()
                 font-size: 36px
                 font-weight: 400
                 color: #772439
+                max-width: 331px
                 line-height: normal
                 margin: 0 0 5px 0
                 @include mobile
                     font-size: 15px
                     max-width: 130px
-            #lawyer-hero-email
+            #lawyer-email
                 font-size: 16px
                 margin: 0
                 @include mobile
@@ -531,7 +537,7 @@ a
                 margin: 0 0 15px 0
                 @include mobile
                     font-size: 20px
-            #lawyer-hero-academic
+            #lawyer-academic-list
                 margin: 0
                 padding: 0 0 0 25px
                 li
@@ -540,13 +546,13 @@ a
                     @include mobile
                         font-size: 12px
 
-.lawyer-professional-experience
+.lawyer-experience
     padding: 50px 0
     background: url('../assets/lawyer-professional-experience-bg.jpg')
     background-position: center
     background-repeat: no-repeat
     background-size: cover
-    .lawyer-professional-experience-wrapper
+    .lawyer-experience-wrapper
         max-width: 679px
         margin: 0 auto
         @include mobile
@@ -560,7 +566,7 @@ a
             margin: 0 0 15px 0
             @include mobile
                 font-size: 20px
-        .lawyer-professional-experience-list
+        #lawyer-experience-list
             margin: 0
             padding: 0 0 0 25px
             li
@@ -575,6 +581,7 @@ a
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+    background-attachment: fixed
     .lawyer-languages-grid
         display: flex
         justify-content: left
@@ -595,7 +602,7 @@ a
             @include mobile
                 font-size: 20px
                 margin-bottom: 10px
-        .lawyer-languages-list
+        #lawyer-languages-list
             margin: 0
             padding: 0 0 0 20px
             li
@@ -603,13 +610,13 @@ a
                 color: #FFF
                 margin-bottom: 6px
 
-.laywer-additional-studies
+.laywer-additional
     padding: 60px 0
     background: url('../assets/laywer-additional-studies-bg.jpg')
     background-position: center
     background-repeat: no-repeat
     background-size: cover
-    .laywer-additional-studies-wrapper
+    .laywer-additional-wrapper
         max-width: 679px
         margin: 0 auto
         @include mobile
@@ -623,7 +630,7 @@ a
             margin: 0 0 15px 0
             @include mobile
                 font-size: 20px
-        .laywer-additional-studies-list
+        #laywer-additional-list
             margin: 0
             padding: 0 0 0 25px
             @include mobile
@@ -708,6 +715,7 @@ a
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+    background-attachment: fixed
     height: 140px
 
 .admin-additional-studies

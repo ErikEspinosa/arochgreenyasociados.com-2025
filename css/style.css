@@ -141,22 +141,22 @@ a {
 .mobile-menu .mobile-menu-header .mobile-menu-close {
   cursor: pointer;
 }
-.mobile-menu .mobile-menu-items {
+.mobile-menu #mobile-menu-items {
   list-style: none;
   margin: 0;
   padding: 20px;
 }
-.mobile-menu .mobile-menu-items .mobile-menu-item,
-.mobile-menu .mobile-menu-items .mobile-menu-item > a {
+.mobile-menu #mobile-menu-items .mobile-menu-item,
+.mobile-menu #mobile-menu-items .mobile-menu-item > a {
   font-size: 22px;
   font-weight: 500;
   margin: 0 0 10px 0;
   color: white;
 }
-.mobile-menu .mobile-menu-items .mobile-menu-subitem {
+.mobile-menu #mobile-menu-items .mobile-menu-subitem {
   margin: 0 0 15px 0;
 }
-.mobile-menu .mobile-menu-items .mobile-menu-subitem a {
+.mobile-menu #mobile-menu-items .mobile-menu-subitem a {
   font-size: 18px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
@@ -696,38 +696,48 @@ a {
   }
 }
 .lawyer-hero .lawyer-hero-grid .lawyer-hero-left {
-  background: url("../assets/lawyers/maria-rocha.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom left;
-  padding: 40px 0 0 220px;
+  position: relative;
+  padding: 40px 0 0 260px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .lawyer-hero .lawyer-hero-grid .lawyer-hero-left {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgba(0, 0, 0, 0.08));
     min-height: 160px;
     padding: 40px 0 0 150px;
   }
 }
-.lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-hero-name {
+.lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-image {
+    height: 100%;
+    width: auto;
+  }
+}
+.lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-name {
   font-family: "Inria Serif", serif;
   font-size: 36px;
   font-weight: 400;
   color: #772439;
+  max-width: 331px;
   line-height: normal;
   margin: 0 0 5px 0;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-hero-name {
+  .lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-name {
     font-size: 15px;
     max-width: 130px;
   }
 }
-.lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-hero-email {
+.lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-email {
   font-size: 16px;
   margin: 0;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-hero-email {
+  .lawyer-hero .lawyer-hero-grid .lawyer-hero-left #lawyer-email {
     font-size: 10px;
   }
 }
@@ -752,37 +762,37 @@ a {
     font-size: 20px;
   }
 }
-.lawyer-hero .lawyer-hero-grid .lawyer-hero-right #lawyer-hero-academic {
+.lawyer-hero .lawyer-hero-grid .lawyer-hero-right #lawyer-academic-list {
   margin: 0;
   padding: 0 0 0 25px;
 }
-.lawyer-hero .lawyer-hero-grid .lawyer-hero-right #lawyer-hero-academic li {
+.lawyer-hero .lawyer-hero-grid .lawyer-hero-right #lawyer-academic-list li {
   font-size: 16px;
   margin-bottom: 6px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .lawyer-hero .lawyer-hero-grid .lawyer-hero-right #lawyer-hero-academic li {
+  .lawyer-hero .lawyer-hero-grid .lawyer-hero-right #lawyer-academic-list li {
     font-size: 12px;
   }
 }
 
-.lawyer-professional-experience {
+.lawyer-experience {
   padding: 50px 0;
   background: url("../assets/lawyer-professional-experience-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.lawyer-professional-experience .lawyer-professional-experience-wrapper {
+.lawyer-experience .lawyer-experience-wrapper {
   max-width: 679px;
   margin: 0 auto;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .lawyer-professional-experience .lawyer-professional-experience-wrapper {
+  .lawyer-experience .lawyer-experience-wrapper {
     max-width: 244px;
   }
 }
-.lawyer-professional-experience .lawyer-professional-experience-wrapper h2 {
+.lawyer-experience .lawyer-experience-wrapper h2 {
   font-family: "Inria Serif", serif;
   font-size: 32px;
   font-weight: 400;
@@ -791,20 +801,20 @@ a {
   margin: 0 0 15px 0;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .lawyer-professional-experience .lawyer-professional-experience-wrapper h2 {
+  .lawyer-experience .lawyer-experience-wrapper h2 {
     font-size: 20px;
   }
 }
-.lawyer-professional-experience .lawyer-professional-experience-wrapper .lawyer-professional-experience-list {
+.lawyer-experience .lawyer-experience-wrapper #lawyer-experience-list {
   margin: 0;
   padding: 0 0 0 25px;
 }
-.lawyer-professional-experience .lawyer-professional-experience-wrapper .lawyer-professional-experience-list li {
+.lawyer-experience .lawyer-experience-wrapper #lawyer-experience-list li {
   font-size: 16px;
   margin-bottom: 6px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .lawyer-professional-experience .lawyer-professional-experience-wrapper .lawyer-professional-experience-list li {
+  .lawyer-experience .lawyer-experience-wrapper #lawyer-experience-list li {
     font-size: 12px;
   }
 }
@@ -815,6 +825,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 .lawyer-languages .lawyer-languages-grid {
   display: flex;
@@ -844,33 +855,33 @@ a {
     margin-bottom: 10px;
   }
 }
-.lawyer-languages .lawyer-languages-grid .lawyer-languages-list {
+.lawyer-languages .lawyer-languages-grid #lawyer-languages-list {
   margin: 0;
   padding: 0 0 0 20px;
 }
-.lawyer-languages .lawyer-languages-grid .lawyer-languages-list li {
+.lawyer-languages .lawyer-languages-grid #lawyer-languages-list li {
   font-size: 16px;
   color: #FFF;
   margin-bottom: 6px;
 }
 
-.laywer-additional-studies {
+.laywer-additional {
   padding: 60px 0;
   background: url("../assets/laywer-additional-studies-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.laywer-additional-studies .laywer-additional-studies-wrapper {
+.laywer-additional .laywer-additional-wrapper {
   max-width: 679px;
   margin: 0 auto;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .laywer-additional-studies .laywer-additional-studies-wrapper {
+  .laywer-additional .laywer-additional-wrapper {
     max-width: 244px;
   }
 }
-.laywer-additional-studies .laywer-additional-studies-wrapper h2 {
+.laywer-additional .laywer-additional-wrapper h2 {
   font-family: "Inria Serif", serif;
   font-size: 32px;
   font-weight: 400;
@@ -879,26 +890,26 @@ a {
   margin: 0 0 15px 0;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .laywer-additional-studies .laywer-additional-studies-wrapper h2 {
+  .laywer-additional .laywer-additional-wrapper h2 {
     font-size: 20px;
   }
 }
-.laywer-additional-studies .laywer-additional-studies-wrapper .laywer-additional-studies-list {
+.laywer-additional .laywer-additional-wrapper #laywer-additional-list {
   margin: 0;
   padding: 0 0 0 25px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .laywer-additional-studies .laywer-additional-studies-wrapper .laywer-additional-studies-list {
+  .laywer-additional .laywer-additional-wrapper #laywer-additional-list {
     padding: 0 0 0 20px;
   }
 }
-.laywer-additional-studies .laywer-additional-studies-wrapper .laywer-additional-studies-list li {
+.laywer-additional .laywer-additional-wrapper #laywer-additional-list li {
   font-size: 16px;
   margin-bottom: 6px;
   color: #FFF;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .laywer-additional-studies .laywer-additional-studies-wrapper .laywer-additional-studies-list li {
+  .laywer-additional .laywer-additional-wrapper #laywer-additional-list li {
     font-size: 12px;
   }
 }
@@ -1011,6 +1022,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   height: 140px;
 }
 

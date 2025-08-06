@@ -51,3 +51,133 @@ const mobileMenuClose = document.querySelector('.mobile-menu-close');
 mobileMenuClose && mobileMenuClose.addEventListener('click', () => {
   closeMobileMenu();
 })
+
+const loadSubmenuItems = async () => {
+  fetch('../lawyers.json')
+    .then(response => response.json())
+    .then(data => {
+      const lawyers = data.lawyers || null;
+      if (lawyers) {
+        const submenu = document.querySelector('#navbar-main-submenu-lawyers');
+        if (submenu) {
+          lawyers.forEach(element => {
+            const submenuItem = document.createElement('li');
+            submenuItem.classList.add('navbar-main-submenu-item');
+            const submenuAnchor = document.createElement('a');
+            submenuAnchor.textContent = element.shortname;
+            submenuAnchor.setAttribute('href', `./abogados.html?username=${element.username}`);
+            submenuAnchor.setAttribute('title', element.shortname);
+            submenuItem.appendChild(submenuAnchor);
+            submenu.appendChild(submenuItem);
+          });
+        }
+      }
+    })
+    .catch(error => {
+      console.log("Error trying to get lawyers.json", error);
+    })
+}
+
+const loadMenuMobileItems = async () => {
+  try {
+    const mobileMenuItems = document.querySelector('#mobile-menu-items');
+    
+    // Add [Panel de abogados] element
+    const lawyersItem = document.createElement('li');
+    lawyersItem.textContent = 'Panel de abogados';
+    lawyersItem.classList.add('mobile-menu-item');
+    mobileMenuItems.appendChild(lawyersItem);
+    
+    // Add layers elements
+    const lawyers = await fetchLawyers();
+    lawyers && lawyers.forEach(element => {
+      const lawyerItem = document.createElement('li');
+      lawyerItem.classList.add('mobile-menu-subitem');
+      const lawyerAnchor = document.createElement('a');
+      lawyerAnchor.textContent = element.shortname;
+      lawyerAnchor.setAttribute('href', `./abogados.html?username=${element.username}`);
+      lawyerAnchor.setAttribute('title', element.shortname);
+      lawyerItem.appendChild(lawyerAnchor);
+      mobileMenuItems.appendChild(lawyerItem);
+    })
+
+    // Add [Panel administrativo] element
+    const adminItem = document.createElement('li');
+    adminItem.classList.add('mobile-menu-item');
+    const adminAnchor = document.createElement('a');
+    adminAnchor.textContent = 'Panel administrativo';
+    adminAnchor.setAttribute('href', './administrativo.html');
+    adminAnchor.setAttribute('title', 'Panel administrativo');
+    adminItem.appendChild(adminAnchor);
+    mobileMenuItems.appendChild(adminItem);
+  } catch (error) {
+    console.error('Failed to get lawyers info:', error);
+  }
+}
+
+const isLawyersPage = () => {
+  const { location: { pathname = null } } = window;
+  return pathname === '/abogados.html';
+}
+
+const getQueryParams = () => {
+  const { location: { search = null } } = window;
+  const queryParams = new URLSearchParams(search);
+  return queryParams;
+}
+
+const getQueryParam = (param) => {
+  const queryParams = getQueryParams();
+  const queryParamValue = queryParams.get(param);
+  return queryParamValue;
+}
+
+const loadLawyersInfo = async () => {
+  try {
+    const imagesPath = '../assets/lawyers/';
+    const lawyers = await fetchLawyers();
+    const username = getQueryParam('username');
+    const lawyer = lawyers.filter(lawyer => lawyer.username === username);
+    if (lawyer) {
+      const image = document.querySelector('#lawyer-image');
+      const name = document.querySelector('#lawyer-name');
+      const email = document.querySelector('#lawyer-email');
+      const academic = document.querySelector('#lawyer-academic-list');
+      const experience = document.querySelector('#lawyer-experience-list');
+      const languages = document.querySelector('#lawyer-languages-list');
+      const additional = document.querySelector('#laywer-additional-list');
+      image.setAttribute('src', `${imagesPath}${lawyer[0].image}`);
+      image.setAttribute('alt', lawyer[0].name);
+      name.textContent = lawyer[0].name;
+      email.textContent = lawyer[0].email;
+      academic.innerHTML = lawyer[0].academic
+      experience.innerHTML = lawyer[0].experience
+      languages.innerHTML = lawyer[0].languages
+      additional.innerHTML = lawyer[0].additional
+    }
+  } catch (error) {
+    console.error('Failed to get lawyers info:', error);
+    throw error;
+  }
+}
+
+const fetchLawyers = async () => {
+  try {
+    const response = await fetch('../lawyers.json');
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ message: response.statusText }));
+      throw new Error(`HTTP error! Status: ${response.status}, Message: ${errorData.message || 'Unknown error'}`);
+    }
+    const data = await response.json();
+    return data.lawyers || null;
+  } catch (error) {
+    console.error('Error trying to get lawyers.json:', error);
+    throw error;
+  }
+}
+
+window.addEventListener('load', () => {
+  loadSubmenuItems();
+  loadMenuMobileItems();
+  isLawyersPage() && loadLawyersInfo();
+})
