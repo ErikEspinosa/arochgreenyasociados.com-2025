@@ -94,6 +94,11 @@ const loadMobileMenuItems = async () => {
       mobileMenuItems.appendChild(lawyerItem);
     })
 
+    // Add divider
+    const divider = document.createElement('div');
+    divider.classList.add('mobile-menu-divider');
+    mobileMenuItems.appendChild(divider);
+
     // Add [Panel administrativo] element
     const adminItem = document.createElement('li');
     adminItem.classList.add('mobile-menu-item');

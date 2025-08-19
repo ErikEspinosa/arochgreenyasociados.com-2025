@@ -152,14 +152,22 @@ a {
   font-weight: 500;
   margin: 0 0 10px 0;
   color: white;
+  text-align: center;
 }
 .mobile-menu #mobile-menu-items .mobile-menu-subitem {
   margin: 0 0 15px 0;
+  text-align: center;
 }
 .mobile-menu #mobile-menu-items .mobile-menu-subitem a {
   font-size: 18px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
+}
+.mobile-menu #mobile-menu-items .mobile-menu-divider {
+  width: 70%;
+  height: 2px;
+  background-color: #fff;
+  margin: 0 auto 10px auto;
 }
 
 .hero-main {
