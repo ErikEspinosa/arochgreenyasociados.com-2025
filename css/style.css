@@ -59,6 +59,10 @@ a {
     display: flex;
   }
 }
+.navbar-main .container .navbar-main-mobile-grid .navbar-main-mobile-logo {
+  width: auto;
+  height: 26px;
+}
 .navbar-main .container .navbar-main-mobile-grid .navbar-main-mobile-burger {
   width: 30px;
   cursor: pointer;
