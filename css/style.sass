@@ -1,6 +1,7 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap')
 
 // Mixins
 @mixin tablet
@@ -12,6 +13,8 @@
 
 @mixin inriaSerif()
     font-family: "Inria Serif", serif
+@mixin SourceSerif4()
+    font-family: "Source Serif 4", serif
 @mixin backgroundCover()
     background-position: center
     background-repeat: no-repeat
@@ -159,67 +162,103 @@ a
     @include mobile
         background-position: center
         background-size: cover
-        min-height: 350px
+        min-height: 310px
     .container
         max-width: 1440px
-        padding: 0 100px 0 200px
-        @include mobile
-            padding: 0 30px
-    .hero-main-grid
-        display: grid
-        grid-template-columns: 40% 60%
-        padding-top: 200px
-        box-sizing: border-box
-        @include mobile
-            grid-template-columns: 1fr 1fr
-            padding-top: 130px
         .hero-main-logo
+            padding-top: 210px
+            padding-left: 200px
             @include mobile
-                img
-                    width: 56px
-                    height: auto
+                display: none
         .hero-main-title
-            display: flex
-            align-items: center
+            padding-top: 320px
+            text-align: center
             @include mobile
-                    display: none
+                display: none
             h1
-                font-size: 24px
-                font-weight: 500
-                color: #fff
-        .hero-main-title-mobile
+                @include SourceSerif4()
+                font-size: 22px
+                font-weight: 600
+                color: #772439
+                text-transform: uppercase
+        .hero-main-grid
             display: none
+            padding: 120px 30px 0 30px
             @include mobile
-                display: block
-            h1
-                font-size: 12px
-                font-weight: 500
-                color: #fff
-                max-width: 100px
-
-.about-banner
-    background-color: #fff
-    padding: 80px 0
-    @include mobile
-        padding: 80px 20px
-    p
-        @include inriaSerif()
-        font-size: 24px
-        font-weight: 400
-        color: #772439
-        max-width: 686px
-        margin: 0 auto
-        @include mobile
-            font-size: 12px
-            max-width: 210px
+                display: grid
+                grid-template-columns: 1fr 1fr
+            .hero-main-grid-title
+                h1
+                    @include SourceSerif4()
+                    font-size: 10px
+                    font-weight: 500
+                    text-transform: uppercase
+                    color: #FFFFFF
 
 .about
-    background-color: #F1F1F2
-    .about-grid
+    position: relative
+    background-color: #EBF0FF
+    .about-intro
         display: flex
-        justify-content: space-between
+        align-items: center
+        background-color: #fff
+        height: 250px
+        p
+            @include inriaSerif()
+            font-size: 24px
+            font-weight: 400
+            color: #772439
+            text-transform: uppercase
+            text-align: center
+            max-width: 686px
+            margin: 0 auto
+            @include mobile
+                font-size: 12px
+                max-width: 210px
+    .about-desc
+        background-color: #EBF0FF
+        display: flex
+        align-items: center
         @include mobile
             display: block
+        .about-desc-image
+            margin-right: 10px
+            img
+                display: block
+            @include mobile
+                margin-right: 0
+                img
+                    width: 240px
+                    height: auto
+        .about-desc-text
+            @include mobile
+                display: flex
+                justify-content: center
+                padding: 40px 0
+            p
+                @include SourceSerif4()
+                font-size: 16px
+                font-weight: 400
+                color: #000000
+                max-width: 328px
+                @include mobile
+                    font-size: 12px
+                    max-width: 246px
+    .about-image
+        position: absolute
+        right: 220px
+        bottom: 0
+        @include mobile
+            display: block
+            position: relative
+            width: 270px
+            height: auto
+            right: 0
+            margin: 0 auto
+
+.about    
+    .about-grid  
+        justify-content: space-between
         .about-left-image
             display: flex
             align-items: flex-end
