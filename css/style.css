@@ -403,7 +403,7 @@ a {
     justify-content: center;
     align-items: flex-start;
     min-height: 250px;
-    padding: 0 60px;
+    padding: 0 35px;
   }
 }
 .details .details-grid .details-left h2 {
@@ -419,6 +419,7 @@ a {
   }
 }
 .details .details-grid .details-left p {
+  font-family: "Source Serif 4", serif;
   font-size: 16px;
   max-width: 330px;
   margin-right: 50px;
@@ -445,7 +446,7 @@ a {
     justify-content: center;
     align-items: flex-start;
     min-height: 250px;
-    padding: 0 60px;
+    padding: 0 35px;
   }
 }
 .details .details-grid .details-right h2 {
@@ -461,6 +462,7 @@ a {
   }
 }
 .details .details-grid .details-right p {
+  font-family: "Source Serif 4", serif;
   font-size: 16px;
   max-width: 330px;
   margin-left: 50px;
@@ -475,13 +477,48 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 170px;
+  width: 284px;
   height: auto;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .details .details-grid .details-right img {
+    width: 170px;
+    height: auto;
+    margin-right: -30px;
+  }
+}
+
+.features-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/features-banner-bg.jpg");
+  background-size: cover;
+  height: 150px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .features-banner {
+    height: 120px;
+  }
+}
+.features-banner p {
+  font-family: "Source Serif 4", serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  max-width: 364px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .features-banner p {
+    font-size: 12px;
+    max-width: 236px;
+  }
 }
 
 .features .features-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .features .features-grid {
@@ -530,71 +567,106 @@ a {
   background-size: cover;
 }
 
-.clients {
+.clients-banner {
   background: url("../assets/clients-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  color: #FFFFFF;
-  padding: 40px 0;
+  height: 120px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .clients {
-    padding: 60px 40px;
+  .clients-banner {
+    height: 100px;
   }
 }
-.clients .clients-grid {
+
+.biography {
+  position: relative;
+}
+.biography .biography-title {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .clients .clients-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.clients .clients-grid .clients-title {
+.biography .biography-title .biography-title-left {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: flex-end;
+}
+.biography .biography-title .biography-title-left .biography-title-image {
+  display: none;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .clients .clients-grid .clients-title {
-    justify-content: left;
-    margin-bottom: 20px;
+  .biography .biography-title .biography-title-left .biography-title-image {
+    display: block;
   }
 }
-.clients .clients-grid .clients-title h2 {
+.biography .biography-title .biography-title-right {
+  padding: 160px 0 40px 0;
+}
+.biography .biography-title .biography-title-right h2 {
   font-family: "Inria Serif", serif;
   font-size: 24px;
   font-weight: 400;
-}
-.clients .clients-grid .clients-list {
-  font-size: 16px;
+  color: #772439;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .clients .clients-grid .clients-list {
-    margin-bottom: 30px;
+  .biography .biography-title .biography-title-right h2 {
+    font-size: 14px;
+    max-width: 130px;
   }
 }
-.clients .clients-grid .clients-list p {
-  margin: 0 0 10px 0;
+.biography .biography-title .biography-title-right h3 {
+  font-family: "Inria Serif", serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #31343A;
 }
-.clients .clients-grid .clients-list ul {
-  margin: 0;
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .biography .biography-title .biography-title-right h3 {
+    font-size: 11px;
+    max-width: 140px;
+  }
 }
-.clients .clients-grid .clients-list ul li {
-  margin: 0 0 5px 0;
+.biography .biography-desc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: url("../assets/biography-bg.jpg");
+  background-size: cover;
 }
-.clients .clients-grid .clients-finances {
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .biography .biography-desc {
+    display: block;
+  }
+}
+.biography .biography-desc .biography-desc-right {
+  padding: 60px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .biography .biography-desc .biography-desc-right {
+    padding: 60px 37px;
+  }
+}
+.biography .biography-desc .biography-desc-right p {
+  font-family: "Source Serif 4", serif;
   font-size: 16px;
-  align-items: center;
+  font-weight: 400;
+  color: #FFFFFF;
+  max-width: 510px;
 }
-.clients .clients-grid .clients-finances p {
-  text-align: center;
-  max-width: 236px;
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .biography .biography-desc .biography-desc-right p {
+    font-size: 12px;
+  }
+}
+.biography .biography-image {
+  position: absolute;
+  bottom: 0;
+  left: 23%;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .biography .biography-image {
+    display: none;
+  }
 }
 
 .contact .contact-grid {

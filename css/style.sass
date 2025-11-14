@@ -312,7 +312,7 @@ a
                 justify-content: center
                 align-items: flex-start
                 min-height: 250px
-                padding: 0 60px
+                padding: 0 35px
             h2
                 @include inriaSerif()
                 font-size: 24px
@@ -322,6 +322,7 @@ a
                     margin-right: 0
                     margin-bottom: 10px
             p
+                @include SourceSerif4()
                 font-size: 16px
                 max-width: 330px
                 margin-right: 50px
@@ -342,7 +343,7 @@ a
                 justify-content: center
                 align-items: flex-start
                 min-height: 250px
-                padding: 0 60px
+                padding: 0 35px
             h2
                 @include inriaSerif()
                 font-size: 24px
@@ -352,6 +353,7 @@ a
                     margin-left: 0
                     margin-bottom: 10px
             p
+                @include SourceSerif4()
                 font-size: 16px
                 max-width: 330px
                 margin-left: 50px
@@ -362,13 +364,37 @@ a
                 position: absolute
                 bottom: 0
                 right: 0
-                width: 170px
+                width: 284px
                 height: auto
+                @include mobile
+                    width: 170px
+                    height: auto
+                    margin-right: -30px
 
+.features-banner
+    display: flex
+    justify-content: center
+    align-items: center
+    background: url('../assets/features-banner-bg.jpg')
+    background-size: cover
+    height: 150px
+    @include mobile
+        height: 120px
+    p
+        @include SourceSerif4()
+        font-size: 16px
+        font-weight: 400
+        color: #000000
+        text-align: center
+        max-width: 364px
+        @include mobile
+            font-size: 12px
+            max-width: 236px
+    
 .features
     .features-grid
         display: grid
-        grid-template-columns: repeat(5, 1fr)
+        grid-template-columns: repeat(4, 1fr)
         @include mobile
             grid-template-columns: 1fr
         > div
@@ -396,48 +422,69 @@ a
             background: linear-gradient(to left, rgba(rgb(30, 30, 30), 0.5), rgba(rgb(30, 30, 30), 0.5)), url('../assets/feature-05.png')
             @include backgroundCover()
 
-.clients
+.clients-banner
     background: url('../assets/clients-bg.jpg')
     @include backgroundCover()
-    background-attachment: fixed
-    color: #FFFFFF
-    padding: 40px 0
+    height: 120px
     @include mobile
-        padding: 60px 40px
-    .clients-grid
+        height: 100px
+
+.biography
+    position: relative
+    .biography-title
         display: grid
-        grid-template-columns: repeat(3, 1fr)
-        @include mobile
-            grid-template-columns: 1fr
-        .clients-title
+        grid-template-columns: 1fr 1fr
+        .biography-title-left
             display: flex
-            justify-content: center
-            align-items: center
-            @include mobile
-                justify-content: left
-                margin-bottom: 20px
+            justify-content: right
+            align-items: flex-end
+            .biography-title-image
+                display: none
+                @include mobile
+                    display: block
+        .biography-title-right
+            padding: 160px 0 40px 0
             h2
                 @include inriaSerif()
                 font-size: 24px
                 font-weight: 400
-        .clients-list
+                color: #772439
+                @include mobile
+                    font-size: 14px
+                    max-width: 130px
+            h3
+                @include inriaSerif()
+                font-size: 20px
+                font-weight: 400
+                color: #31343A
+                @include mobile
+                    font-size: 11px
+                    max-width: 140px
+    .biography-desc
+        display: grid
+        grid-template-columns: 1fr 1fr
+        background: url('../assets/biography-bg.jpg')
+        background-size: cover
+        @include mobile
+            display: block
+        .biography-desc-right
+            padding: 60px 0
             @include mobile
-                margin-bottom: 30px
-            font-size: 16px
+                padding: 60px 37px
             p
-                margin: 0 0 10px 0
-            ul
-                margin: 0
-                li
-                    margin: 0 0 5px 0
-        .clients-finances
-            display: flex
-            justify-content: center
-            font-size: 16px
-            align-items: center
-            p
-                text-align: center
-                max-width: 236px
+                @include SourceSerif4()
+                font-size: 16px
+                font-weight: 400
+                color: #FFFFFF
+                max-width: 510px
+                @include mobile
+                    font-size: 12px
+    .biography-image
+        position: absolute
+        bottom: 0
+        left: 23%
+        @include mobile
+            display: none
 
 .contact
     .contact-grid
