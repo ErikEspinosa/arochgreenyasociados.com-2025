@@ -486,40 +486,104 @@ a
         @include mobile
             display: none
 
+.biography-banner
+    display: flex
+    justify-content: center
+    align-items: center
+    background: url('../assets/biography-banner-bg.jpg')
+    @include backgroundCover()
+    height: 200px
+    @include mobile
+        height: 150px
+    p
+        @include SourceSerif4()
+        font-size: 16px
+        font-weight: 400
+        color: #772439
+        max-width: 506px
+        @include mobile
+            font-size: 12px
+            max-width: 246px
+
 .contact
+    position: relative
+    display: flex
+    align-items: center
+    background-color: #FFFFFF
+    height: 300px
+    @include mobile
+        display: block
+        height: auto
+        background-color: #EBF0FF
     .contact-grid
         display: grid
         grid-template-columns: 1fr 1fr
+        width: 100%
+        background-color: #FFFFFF
         @include mobile
-            grid-template-columns: 1fr
-        .contact-info
+            display: block
+            padding: 20px 0
+        .contact-grid-left
             display: flex
             justify-content: right
-            align-items: center
             @include mobile
-                padding: 60px 0
-            .contact-info-wrapper
-                max-width: 370px
-                font-size: 16px
-                margin-right: 100px
+                display: block
+            .contact-grid-left-container
+                width: 507px
+                margin-right: 50px
                 @include mobile
-                    max-width: 244px
+                    width: 246px
                     margin-right: 0
                     margin: 0 auto
-                .contact-info-highlight
-                    font-weight: bold
-                    color: #772439
-                img
-                    display: block
+                .contact-grid-left-title
+                    @include SourceSerif4()
+                    font-size: 16px
+                    font-weight: 400
+                    color: #585857
+                    max-width: 326px
                     margin: 0 auto
-                    padding: 10px 0 15px 0
-        .contact-map
-            iframe
-                display: block
-                width: 100%
-                height: 380px
-                @include mobile
-                    height: 230px
+                    margin-bottom: 30px
+                    @include mobile
+                        font-size: 12px
+                        margin-bottom: 10px
+                .contact-grid-left-addresses
+                    display: flex
+                    justify-content: space-between
+                    @include mobile
+                        display: block
+                    .contact-grid-left-address
+                        text-align: center
+                        @include mobile
+                            margin-bottom: 10px
+                        img
+                            margin-bottom: 10px
+                            @include mobile
+                                width: 30px
+                                height: 30px
+                        p
+                            @include SourceSerif4()
+                            font-size: 14px
+                            font-weight: 400
+                            color: #772439
+                            text-align: left
+                            @include mobile
+                                font-size: 12px
+                                text-align: center
+    .contact-image
+        position: absolute
+        display: block
+        bottom: 0
+        right: 0
+        @include mobile
+            position: relative
+            width: 100%
+            height: auto
+            margin-top: 20px
+
+.contact-map
+    @include mobile
+        iframe
+            height: 200px
 
 .scope
     .scope-grid

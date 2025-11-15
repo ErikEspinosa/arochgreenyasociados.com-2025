@@ -669,54 +669,153 @@ a {
   }
 }
 
+.biography-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/biography-banner-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .biography-banner {
+    height: 150px;
+  }
+}
+.biography-banner p {
+  font-family: "Source Serif 4", serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #772439;
+  max-width: 506px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .biography-banner p {
+    font-size: 12px;
+    max-width: 246px;
+  }
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 300px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact {
+    display: block;
+    height: auto;
+    background-color: #EBF0FF;
+  }
+}
 .contact .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .contact .contact-grid {
-    grid-template-columns: 1fr;
+    display: block;
+    padding: 20px 0;
   }
 }
-.contact .contact-grid .contact-info {
+.contact .contact-grid .contact-grid-left {
   display: flex;
   justify-content: right;
-  align-items: center;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .contact .contact-grid .contact-info {
-    padding: 60px 0;
+  .contact .contact-grid .contact-grid-left {
+    display: block;
   }
 }
-.contact .contact-grid .contact-info .contact-info-wrapper {
-  max-width: 370px;
-  font-size: 16px;
-  margin-right: 100px;
+.contact .contact-grid .contact-grid-left .contact-grid-left-container {
+  width: 507px;
+  margin-right: 50px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .contact .contact-grid .contact-info .contact-info-wrapper {
-    max-width: 244px;
+  .contact .contact-grid .contact-grid-left .contact-grid-left-container {
+    width: 246px;
     margin-right: 0;
     margin: 0 auto;
   }
 }
-.contact .contact-grid .contact-info .contact-info-wrapper .contact-info-highlight {
-  font-weight: bold;
-  color: #772439;
-}
-.contact .contact-grid .contact-info .contact-info-wrapper img {
-  display: block;
+.contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-title {
+  font-family: "Source Serif 4", serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #585857;
+  max-width: 326px;
   margin: 0 auto;
-  padding: 10px 0 15px 0;
-}
-.contact .contact-grid .contact-map iframe {
-  display: block;
-  width: 100%;
-  height: 380px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .contact .contact-grid .contact-map iframe {
-    height: 230px;
+  .contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-title {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+.contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-addresses {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-addresses {
+    display: block;
+  }
+}
+.contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-addresses .contact-grid-left-address {
+  text-align: center;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-addresses .contact-grid-left-address {
+    margin-bottom: 10px;
+  }
+}
+.contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-addresses .contact-grid-left-address img {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-addresses .contact-grid-left-address img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-addresses .contact-grid-left-address p {
+  font-family: "Source Serif 4", serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #772439;
+  text-align: left;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact .contact-grid .contact-grid-left .contact-grid-left-container .contact-grid-left-addresses .contact-grid-left-address p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+.contact .contact-image {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact .contact-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-map iframe {
+    height: 200px;
   }
 }
 
