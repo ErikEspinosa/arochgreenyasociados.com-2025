@@ -1644,6 +1644,12 @@ a {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-languages-generic {
+    height: 100px;
+  }
+}
+
 .profile-studies {
   background: url("../assets/profile-studies-bg.jpg");
   background-position: center;
@@ -1688,7 +1694,7 @@ a {
   }
 }
 
-.direction-footer {
+.profile-footer {
   display: flex;
   justify-content: center;
   background: url("../assets/footer-bg.jpg");
@@ -1698,53 +1704,287 @@ a {
   padding-top: 40px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .direction-footer {
+  .profile-footer {
     padding-top: 20px;
   }
 }
-.direction-footer .direction-footer-content {
+.profile-footer .profile-footer-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 735px;
+  grid-template-columns: auto 1fr;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .direction-footer .direction-footer-content {
+  .profile-footer .profile-footer-content {
     display: block;
-    width: 192px;
+    width: 300px;
   }
 }
-.direction-footer .direction-footer-content .direction-footer-content-left {
+.profile-footer .profile-footer-content .profile-footer-content-left {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 20px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .direction-footer .direction-footer-content .direction-footer-content-left {
+  .profile-footer .profile-footer-content .profile-footer-content-left {
+    margin-right: 0;
     margin-bottom: 20px;
   }
 }
-.direction-footer .direction-footer-content .direction-footer-content-left h2 {
+.profile-footer .profile-footer-content .profile-footer-content-left h2 {
   font-family: "Inria Serif", serif;
   font-size: 36px;
   font-weight: 400;
   color: #FFFFFF;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .direction-footer .direction-footer-content .direction-footer-content-left h2 {
+  .profile-footer .profile-footer-content .profile-footer-content-left h2 {
     font-size: 20px;
   }
 }
-.direction-footer .direction-footer-content .direction-footer-content-right {
+.profile-footer .profile-footer-content .profile-footer-content-right {
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
-.direction-footer .direction-footer-content .direction-footer-content-right img {
+.profile-footer .profile-footer-content .profile-footer-content-right img {
   display: block;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .direction-footer .direction-footer-content .direction-footer-content-right img {
+  .profile-footer .profile-footer-content .profile-footer-content-right img {
     width: 151px;
     height: auto;
   }
+}
+
+.profile-hero {
+  position: relative;
+}
+.profile-hero .profile-hero-title {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 160px 0 40px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title {
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding: 80px 0 0 0;
+  }
+}
+.profile-hero .profile-hero-title .profile-hero-title-left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.profile-hero .profile-hero-title .profile-hero-title-right {
+  display: flex;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title .profile-hero-title-right {
+    display: block;
+  }
+}
+.profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content {
+  max-width: 320px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+}
+.profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content h1 {
+  font-family: "Inria Serif", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #772439;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content h1 {
+    font-size: 15px;
+  }
+}
+.profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content h2 {
+  font-family: "Source Serif 4", serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #31343A;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content h2 {
+    font-size: 8px;
+  }
+}
+.profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content p {
+    font-size: 7px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-desc {
+    padding-bottom: 20px;
+  }
+}
+.profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-desc p {
+  font-family: "Source Serif 4", serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  max-width: 327px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-desc p {
+    font-size: 10px;
+    max-width: 180px;
+  }
+}
+.profile-hero .profile-hero-academic {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: url("../assets/direction-hero-bg-1.jpg");
+  min-height: 290px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic {
+    display: block;
+    padding: 20px 0;
+    min-height: auto;
+  }
+}
+.profile-hero .profile-hero-academic .profile-hero-academic-right {
+  display: flex;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic .profile-hero-academic-right {
+    display: block;
+  }
+}
+.profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-content {
+  max-width: 679px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-content {
+    max-width: 244px;
+    margin: 0 auto;
+  }
+}
+.profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-content h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #772439;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-content h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-content ul {
+    padding-left: 20px;
+  }
+}
+.profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-content ul li {
+  font-family: "Source Serif 4", serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-content ul li {
+    font-size: 12px;
+  }
+}
+.profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-title h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #772439;
+  max-width: 170px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-title h2 {
+    font-size: 20px;
+    max-width: 244px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+.profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-desc ul {
+  max-width: 502px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-desc ul {
+    max-width: 244px;
+    padding-left: 20px;
+    margin: 0 auto;
+  }
+}
+.profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-desc ul li {
+  font-family: "Source Serif 4", serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic .profile-hero-academic-right .profile-hero-academic-desc ul li {
+    font-size: 12px;
+  }
+}
+.profile-hero .profile-hero-academic-generic {
+  padding: 60px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic-generic {
+    padding: 20px 0;
+  }
+}
+.profile-hero .profile-hero-image {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 7%;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-image {
+    display: none;
+  }
+}
+.profile-hero .profile-hero-image-mobile {
+  display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-image-mobile {
+    display: block;
+  }
+}
+
+.profile-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  background: url("../assets/profile-studies-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.profile-contact p {
+  font-family: "Inria Serif", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+  max-width: 450px;
 }/*# sourceMappingURL=style.css.map */

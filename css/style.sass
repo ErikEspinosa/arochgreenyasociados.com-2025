@@ -1124,6 +1124,9 @@ a
                     color: #FFFFFF
                     @include mobile
                         font-size: 16px
+.profile-languages-generic
+    @include mobile
+        height: 100px
 
 .profile-studies
     background: url('../assets/profile-studies-bg.jpg')
@@ -1153,7 +1156,7 @@ a
                 @include mobile
                     font-size: 12px
 
-.direction-footer
+.profile-footer
     display: flex
     justify-content: center
     background: url('../assets/footer-bg.jpg')
@@ -1161,18 +1164,19 @@ a
     padding-top: 40px
     @include mobile
         padding-top: 20px
-    .direction-footer-content
+    .profile-footer-content
         display: grid
-        grid-template-columns: 1fr 1fr
-        width: 735px
+        grid-template-columns: auto 1fr
         @include mobile
             display: block
-            width: 192px
-        .direction-footer-content-left
+            width: 300px
+        .profile-footer-content-left
             display: flex
             justify-content: center
             align-items: center
+            margin-right: 20px
             @include mobile
+                margin-right: 0
                 margin-bottom: 20px
             h2
                 @include inriaSerif()
@@ -1181,7 +1185,7 @@ a
                 color: #FFFFFF
                 @include mobile
                     font-size: 20px
-        .direction-footer-content-right
+        .profile-footer-content-right
             display: flex
             justify-content: center
             align-items: flex-end
@@ -1191,3 +1195,153 @@ a
                     width: 151px
                     height: auto
 
+.profile-hero
+    position: relative
+    .profile-hero-title
+        display: grid
+        grid-template-columns: 40% 60%
+        padding: 160px 0 40px 0
+        @include mobile
+            grid-template-columns: auto 1fr
+            gap: 10px
+            padding: 80px 0 0 0
+        .profile-hero-title-left
+            display: flex
+            justify-content: center
+            align-items: flex-end
+        .profile-hero-title-right
+            display: flex
+            @include mobile
+                display: block
+            .profile-hero-title-content
+                max-width: 320px
+                @include mobile
+                    max-width: 150px
+                    margin-bottom: 20px
+                h1
+                    @include inriaSerif()
+                    font-size: 36px
+                    font-weight: 400
+                    color: #772439
+                    @include mobile
+                        font-size: 15px
+                h2
+                    @include SourceSerif4()
+                    font-size: 20px
+                    font-weight: 400
+                    color: #31343A
+                    @include mobile
+                        font-size: 8px
+                p
+                    font-size: 16px
+                    font-weight: 400
+                    color: #000000
+                    @include mobile
+                        font-size: 7px
+            .profile-hero-title-desc
+                @include mobile
+                    padding-bottom: 20px
+                p
+                    @include SourceSerif4()
+                    font-size: 16px
+                    font-weight: 400
+                    color: #000000
+                    max-width: 327px
+                    @include mobile
+                        font-size: 10px
+                        max-width: 180px
+    .profile-hero-academic
+        display: grid
+        grid-template-columns: 40% 60%
+        background: url('../assets/direction-hero-bg-1.jpg')
+        min-height: 290px
+        @include backgroundCover()
+        padding: 120px 0
+        box-sizing: border-box
+        @include mobile
+            display: block
+            padding: 20px 0
+            min-height: auto
+        .profile-hero-academic-right
+            display: flex
+            @include mobile
+                display: block
+            .profile-hero-academic-content
+                max-width: 679px
+                @include mobile
+                    max-width: 244px
+                    margin: 0 auto
+                h2
+                    @include inriaSerif()
+                    font-size: 32px
+                    font-weight: 400
+                    color: #772439
+                    margin-bottom: 10px
+                    @include mobile
+                        font-size: 20px
+                ul
+                    @include mobile
+                        padding-left: 20px
+                    li
+                        @include SourceSerif4()
+                        font-size: 16px
+                        font-weight: 400
+                        color: #000000
+                        @include mobile
+                            font-size: 12px
+            .profile-hero-academic-title
+                h2
+                    @include inriaSerif()
+                    font-size: 30px
+                    font-weight: 400
+                    color: #772439
+                    max-width: 170px
+                    @include mobile
+                        font-size: 20px
+                        max-width: 244px
+                        margin: 0 auto
+                        margin-bottom: 10px
+            .profile-hero-academic-desc
+                ul
+                    max-width: 502px
+                    @include mobile
+                        max-width: 244px
+                        padding-left: 20px
+                        margin: 0 auto
+                    li
+                        @include SourceSerif4()
+                        font-size: 16px
+                        font-weight: 400
+                        color: #000000
+                        @include mobile
+                            font-size: 12px
+    .profile-hero-academic-generic
+            padding: 60px 0
+            @include mobile
+                padding: 20px 0
+    .profile-hero-image
+        position: absolute
+        display: block
+        bottom: 0
+        left: 7%
+        @include mobile
+            display: none
+    .profile-hero-image-mobile
+        display: none
+        @include mobile
+            display: block
+
+.profile-contact
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 260px
+    background: url('../assets/profile-studies-bg.jpg')
+    @include backgroundCover()
+    p
+        @include inriaSerif()
+        font-size: 36px
+        font-weight: 400
+        color: #FFFFFF
+        text-align: center
+        max-width: 450px
