@@ -174,8 +174,92 @@ const fetchLawyers = async () => {
   }
 }
 
+const fetchMenu = async () => {
+  try {
+    const response = await fetch('menu.json');
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ message: response.statusText }));
+      throw new Error(`HTTP error! Status: ${response.status}, Message: ${errorData.message || 'Unknown error'}`);
+    }
+    const data = await response.json();
+    return data.menu || null;
+  } catch (error) {
+    console.error('Error trying to get lawyers.json:', error);
+    throw error;
+  }
+}
+
+const createMenu = async () => {
+  try {
+    const data = await fetchMenu()
+    const menu = document.querySelector(".navbar-main-menu")
+    menu && data && data.forEach(item => {
+      // Add menu item
+      const menuItem = document.createElement("li")
+      menuItem.classList.add("navbar-main-menu-item")
+      const menuItemAnchor = document.createElement("a")
+      menuItemAnchor.setAttribute("href", "#")
+      menuItemAnchor.setAttribute("title", item.title)
+      menuItemAnchor.innerText = item.title
+      menuItem.appendChild(menuItemAnchor)
+      menu.appendChild(menuItem)
+
+      // Add submenu items
+      const subitems = item.items
+      if (subitems && subitems.length > 0) {
+        const submenuList = document.createElement("ul")
+        submenuList.classList.add("navbar-main-submenu")
+        subitems.forEach(subitem => {
+          const submenuItem = document.createElement("li")
+          submenuItem.classList.add("navbar-main-submenu-item")
+          const submenuItemAnchor = document.createElement("a")
+          submenuItemAnchor.setAttribute("href", subitem.path)
+          submenuItemAnchor.setAttribute("title", subitem.title)
+          submenuItemAnchor.innerText = subitem.title
+          submenuItem.appendChild(submenuItemAnchor)
+          submenuList.appendChild(submenuItem)
+        });
+        menuItem.appendChild(submenuList)
+      }
+    })
+  } catch (error) {
+    console.error('Failed to get menu info:', error);
+  }
+}
+
+const createMobileMenu = async () => {
+  try {
+    const data = await fetchMenu()
+    const mobileMenu = document.querySelector("#mobile-menu-items")
+    mobileMenu && data && data.forEach(item => {
+      const mobileMenuItem = document.createElement("li")
+      mobileMenuItem.classList.add("mobile-menu-item")
+      const mobileMenuItemAnchor = document.createElement("a")
+      mobileMenuItemAnchor.setAttribute("href", "#")
+      mobileMenuItemAnchor.setAttribute("title", item.title)
+      mobileMenuItemAnchor.innerText = item.title
+      mobileMenuItem.appendChild(mobileMenuItemAnchor)
+      mobileMenu.appendChild(mobileMenuItem)
+      const subitems = item.items
+      if (subitems && subitems.length > 0) {
+        subitems.forEach(subitem => {
+          const mobileSubmenuItem = document.createElement("li")
+          mobileSubmenuItem.classList.add("mobile-menu-subitem")
+          const mobileSubmenuItemAnchor = document.createElement("a")
+          mobileSubmenuItemAnchor.setAttribute("href", subitem.path)
+          mobileSubmenuItemAnchor.setAttribute("title", subitem.title)
+          mobileSubmenuItemAnchor.innerText = subitem.title
+          mobileSubmenuItem.appendChild(mobileSubmenuItemAnchor)
+          mobileMenu.appendChild(mobileSubmenuItem)
+        })
+      }
+    })
+  } catch (error) {
+    console.error('Failed to get menu info:', error);
+  }
+}
+
 window.addEventListener('load', () => {
-  loadSubmenuItems();
-  loadMobileMenuItems();
-  isLawyersPage() && loadLawyersInfo();
+  createMenu();
+  createMobileMenu();
 })

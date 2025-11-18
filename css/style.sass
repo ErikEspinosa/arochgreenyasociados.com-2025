@@ -50,11 +50,12 @@ a
     width: 100%
     height: 60px
     background: rgba(0, 0, 0, 0.25)
+    z-index: 9998
     @include mobile
         background-color: #772439
     .container
         display: flex
-        justify-content: right
+        justify-content: center
         @include mobile
             padding: 0 20px
         .navbar-main-mobile-grid
@@ -132,21 +133,22 @@ a
     #mobile-menu-items
         list-style: none
         margin: 0
-        padding: 20px
-        .mobile-menu-item,
-        .mobile-menu-item > a
-            font-size: 22px
-            font-weight: 500
-            margin: 0 0 10px 0
-            color: #ffff
-            text-align: center
-        .mobile-menu-subitem
+        padding: 20px 0
+        .mobile-menu-item
             margin: 0 0 15px 0
-            text-align: center
+            border-bottom: 1px solid #FFFFFF
+            padding-left: 20px
             a
                 font-size: 18px
                 font-weight: 500
-                color: rgba(255, 255, 255, 0.8)
+                color: #ffff
+        .mobile-menu-subitem
+            margin: 0 0 15px 0
+            padding-left: 20px
+            a
+                font-size: 18px
+                font-weight: 500
+                color: #ffff
         .mobile-menu-divider
             width: 70%
             height: 2px
@@ -585,6 +587,25 @@ a
         iframe
             height: 200px
 
+.blocks
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    @include mobile
+        display: block
+    .blocks-block
+        height: 350px
+        @include mobile
+            height: 230px
+    .blocks-block-1
+        background: url('../assets/blocks-block-1.jpg')
+        @include backgroundCover()
+    .blocks-block-2
+        background: url('../assets/blocks-block-2.jpg')
+        @include backgroundCover()
+    .blocks-block-3
+        background: url('../assets/blocks-block-3.jpg')
+        @include backgroundCover()
+
 .scope
     .scope-grid
         display: grid
@@ -636,14 +657,23 @@ a
                         display: none
 
 .footer-main
-    display: flex
-    justify-content: center
-    align-items: center
-    background: url('../assets/footer-bg.jpg')
-    @include backgroundCover()
-    height: 481px
-    @include mobile
-       height: 250px
+    .footer-main-banner
+        height: 480px
+        background: url('../assets/footer-bg.jpg')
+        @include backgroundCover()
+        @include mobile
+            height: 250px
+    .footer-main-logo
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 200px
+        background-color: #772439
+        @include mobile
+            height: 44px
+            img
+                width: 30px
+                height: 30px
 
 .lawyer-hero
     .lawyer-hero-grid
@@ -911,3 +941,253 @@ a
                 color: #FFF
                 @include mobile
                     font-size: 12px
+
+.direction-hero
+    position: relative
+    .direction-hero-title
+        display: grid
+        grid-template-columns: 1fr 1fr
+        @include mobile
+            grid-template-columns: auto 1fr
+            padding-top: 70px
+        .direction-hero-title-left
+            display: flex
+            align-items: flex-end
+            .direction-hero-image-mobile
+                display: none
+                @include mobile
+                    display: block
+        .direction-hero-title-right
+            padding: 180px 0 60px 0
+            @include mobile
+                padding: 10px 0 0 0
+            h1
+                @include inriaSerif()
+                font-size: 36px
+                font-weight: 400
+                color: #772439
+                max-width: 331px
+                @include mobile
+                    font-size: 15px
+                    max-width: 127px
+            h2
+                @include SourceSerif4()
+                font-size: 20px
+                font-weight: 400
+                color: #31343A
+                text-transform: uppercase
+                @include mobile
+                    font-size: 8px
+            p
+                @include SourceSerif4()
+                font-size: 16px
+                font-weight: 400
+                color: #000000
+                @include mobile
+                    font-size: 7px
+    .direction-hero-desc
+        display: grid
+        grid-template-columns: 1fr 1fr
+        background: url('../assets/direction-hero-bg-1.jpg')
+        @include backgroundCover()
+        @include mobile
+            display: block
+        .direction-hero-desc-right
+            padding: 70px 0
+            @include mobile
+                padding: 30px 0
+            ul
+                margin: 0
+                padding: 0
+                padding-left: 20px
+                @include mobile
+                    list-style: none
+                    width: fit-content
+                    margin: 0 auto
+                    padding-left: 0
+                li
+                    @include SourceSerif4()
+                    font-size: 16px
+                    font-weight: 400
+                    color: #000000
+                    max-width: 508px
+                    @include mobile
+                        font-size: 12px
+                        max-width: 244px
+    .direction-hero-image
+        position: absolute
+        display: block
+        left: 15%
+        bottom: 0
+        @include mobile
+            display: none
+
+.direction-banner
+    height: 130px
+    background: url('../assets/direction-banner-bg.jpg')
+    @include backgroundCover()
+    @include mobile
+        height: 40px
+
+.direction-academic
+    position: relative
+    .direction-academic-title
+        height: 280px
+        @include mobile
+            display: none
+    .direction-academic-desc
+        display: grid
+        grid-template-columns: 1fr 1fr
+        background: url('../assets/direction-academic-bg.jpg')
+        @include backgroundCover()
+        min-height: 280px
+        @include mobile
+            display: block
+        .direction-academic-desc-left
+            display: flex
+            justify-content: right
+            align-items: center
+            @include mobile
+                display: block
+                padding: 20px 0 0 10px
+            h2
+                @include inriaSerif()
+                font-size: 32px
+                font-weight: 400
+                color: #772439
+                max-width: 176px
+                @include mobile
+                    font-size: 20px
+                    max-width: 256px
+                    margin: 0 auto
+        .direction-academic-desc-right
+            display: flex
+            justify-content: left
+            align-items: center
+            @include mobile
+                padding-bottom: 330px
+            ul
+                li
+                    @include SourceSerif4()
+                    font-size: 16px
+                    font-weight: 400
+                    color: #000000
+                    max-width: 503px
+                    @include mobile
+                        font-size: 12px
+                        max-width: 244px
+    .direction-academic-image
+        position: absolute
+        display: block
+        bottom: 0
+        left: 15%
+        @include mobile
+            width: 194px
+            height: auto
+
+.profile-languages
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 120px
+    background: url('../assets/profile-languages-bg.jpg')
+    @include backgroundCover()
+    @include mobile
+        height: 180px
+    .profile-languages-content
+        display: grid
+        grid-template-columns: auto 1fr
+        width: 673px
+        @include mobile
+            display: block
+            width: 244px
+        .profile-languages-content-left,
+        .profile-languages-content-right
+            display: flex
+            align-items: center
+        .profile-languages-content-left
+            h2
+                @include inriaSerif()
+                font-size: 32px
+                font-weight: 400
+                color: #FFFFFF
+                @include mobile
+                    font-size: 20px
+        .profile-languages-content-right
+            ul
+                @include mobile
+                    padding-left: 25px
+                li
+                    @include SourceSerif4()
+                    font-size: 16px
+                    font-weight: 400
+                    color: #FFFFFF
+                    @include mobile
+                        font-size: 16px
+
+.profile-studies
+    background: url('../assets/profile-studies-bg.jpg')
+    @include backgroundCover()
+    padding: 60px 0 20px 0
+    .profile-studies-content
+        width: 679px
+        margin: 0 auto
+        @include mobile
+            width: 244px
+        h2
+            @include inriaSerif()
+            font-size: 32px
+            font-weight: 400
+            color: #FFFFFF
+            margin: 0 0 20px 0
+            @include mobile
+                font-size: 20px
+                margin: 0 0 10px 0
+        ul
+            padding-left: 20px
+            li
+                @include SourceSerif4()
+                font-size: 16px
+                font-weight: 400
+                color: #FFFFFF
+                @include mobile
+                    font-size: 12px
+
+.direction-footer
+    display: flex
+    justify-content: center
+    background: url('../assets/footer-bg.jpg')
+    @include backgroundCover()
+    padding-top: 40px
+    @include mobile
+        padding-top: 20px
+    .direction-footer-content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        width: 735px
+        @include mobile
+            display: block
+            width: 192px
+        .direction-footer-content-left
+            display: flex
+            justify-content: center
+            align-items: center
+            @include mobile
+                margin-bottom: 20px
+            h2
+                @include inriaSerif()
+                font-size: 36px
+                font-weight: 400
+                color: #FFFFFF
+                @include mobile
+                    font-size: 20px
+        .direction-footer-content-right
+            display: flex
+            justify-content: center
+            align-items: flex-end
+            img
+                display: block
+                @include mobile
+                    width: 151px
+                    height: auto
+

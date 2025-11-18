@@ -1,0 +1,68 @@
+{
+    "menu": [
+        {
+            "title": "Dirección general",
+            "items": [
+                {
+                    "title": "María Rocha",
+                    "path": "/maria-rocha.html"
+                },
+                {
+                    "title": "Francisco Rocha",
+                    "path": "/francisco-rocha.html"
+                }
+            ]
+        },
+        {
+            "title": "Área de litigio penal",
+            "items": [
+                {
+                    "title": "Juan Franco",
+                    "path": "/juan-franco.html"
+                },
+                {
+                    "title": "Paola Hernández",
+                    "path": "/paola-hernandez.html"
+                },
+                {
+                    "title": "Diego Montiel",
+                    "path": "/diego-montiel.html"
+                },
+                {
+                    "title": "David Román",
+                    "path": "/david-roman.html"
+                }
+            ]
+        },
+        {
+            "title": "Área de litigio civil",
+            "items": [
+                {
+                    "title": "Wendolyn Martínez",
+                    "path": "/wendolyn-martinez.html"
+                },
+                {
+                    "title": "Yovana Luna",
+                    "path": "/yovana-luna.html"
+                },
+                {
+                    "title": "Enrique Interino",
+                    "path": "/enrique-interino.html"
+                }
+            ]
+        },
+        {
+            "title": "Panel administrativo",
+            "items": [
+                {
+                    "title": "Lissa Galindo",
+                    "path": "/lissa-galindo.html"
+                },
+                {
+                    "title": "Samara Medrano",
+                    "path": "/samara-medrano.html"
+                }
+            ]
+        }
+    ]
+}
