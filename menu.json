@@ -5,11 +5,11 @@
             "items": [
                 {
                     "title": "María Rocha",
-                    "path": "/maria-rocha.html"
+                    "path": "./maria-rocha.html"
                 },
                 {
                     "title": "Francisco Rocha",
-                    "path": "/francisco-rocha.html"
+                    "path": "./francisco-rocha.html"
                 }
             ]
         },
@@ -18,19 +18,19 @@
             "items": [
                 {
                     "title": "Juan Franco",
-                    "path": "/juan-franco.html"
+                    "path": "./juan-franco.html"
                 },
                 {
                     "title": "Paola Hernández",
-                    "path": "/paola-hernandez.html"
+                    "path": "./paola-hernandez.html"
                 },
                 {
                     "title": "Diego Montiel",
-                    "path": "/diego-montiel.html"
+                    "path": "./diego-montiel.html"
                 },
                 {
                     "title": "David Román",
-                    "path": "/david-roman.html"
+                    "path": "./david-roman.html"
                 }
             ]
         },
@@ -39,15 +39,15 @@
             "items": [
                 {
                     "title": "Wendolyn Martínez",
-                    "path": "/wendolyn-martinez.html"
+                    "path": "./wendolyn-martinez.html"
                 },
                 {
                     "title": "Yovana Luna",
-                    "path": "/yovana-luna.html"
+                    "path": "./yovana-luna.html"
                 },
                 {
                     "title": "Enrique Interino",
-                    "path": "/enrique-interino.html"
+                    "path": "./enrique-interino.html"
                 }
             ]
         },
@@ -56,15 +56,15 @@
             "items": [
                 {
                     "title": "Lissa Galindo",
-                    "path": "/lissa-galindo.html"
+                    "path": "./lissa-galindo.html"
                 },
                 {
                     "title": "Samara Medrano",
-                    "path": "/samara-medrano.html"
+                    "path": "./samara-medrano.html"
                 },
                 {
                     "title": "Andrea Romero",
-                    "path": "/andrea-romero.html"
+                    "path": "./andrea-romero.html"
                 }
             ]
         }
