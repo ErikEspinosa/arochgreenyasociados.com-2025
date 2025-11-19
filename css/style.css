@@ -76,6 +76,8 @@ a {
   margin-bottom: 5px;
 }
 .navbar-main .container .navbar-main-menu {
+  display: flex;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -87,7 +89,7 @@ a {
 }
 .navbar-main .container .navbar-main-menu .navbar-logo img {
   width: auto;
-  height: 20px;
+  height: 30px;
 }
 .navbar-main .container .navbar-main-menu .navbar-main-menu-item {
   display: inline-block;
