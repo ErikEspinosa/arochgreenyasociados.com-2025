@@ -201,7 +201,7 @@ const createMenu = async () => {
     logoAnchor.classList.add('navbar-logo')
     logoItem.appendChild(logoAnchor)
     const logo = document.createElement('img')
-    logo.setAttribute('src', './../assets/logo-white.png')
+    logo.setAttribute('src', './assets/logo-white.png')
     logo.setAttribute('title', 'Inicio')
     logoAnchor.appendChild(logo)
     menu.appendChild(logoItem)
