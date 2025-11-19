@@ -85,6 +85,10 @@ a {
     display: none;
   }
 }
+.navbar-main .container .navbar-main-menu .navbar-logo img {
+  width: auto;
+  height: 20px;
+}
 .navbar-main .container .navbar-main-menu .navbar-main-menu-item {
   display: inline-block;
   margin-right: 60px;

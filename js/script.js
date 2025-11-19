@@ -193,6 +193,19 @@ const createMenu = async () => {
   try {
     const data = await fetchMenu()
     const menu = document.querySelector(".navbar-main-menu")
+    // Add home anchor
+    const logoItem = document.createElement('li')
+    logoItem.classList.add('navbar-main-menu-item')
+    const logoAnchor = document.createElement('a')
+    logoAnchor.setAttribute('href', './')
+    logoAnchor.classList.add('navbar-logo')
+    logoItem.appendChild(logoAnchor)
+    const logo = document.createElement('img')
+    logo.setAttribute('src', '../assets/logo-white.png')
+    logo.setAttribute('title', 'Inicio')
+    logoAnchor.appendChild(logo)
+    menu.appendChild(logoItem)
+    
     menu && data && data.forEach(item => {
       // Add menu item
       const menuItem = document.createElement("li")
