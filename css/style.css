@@ -311,7 +311,7 @@ a {
 }
 .about .about-image {
   position: absolute;
-  right: 220px;
+  right: 12%;
   bottom: 0;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -322,6 +322,18 @@ a {
     height: auto;
     right: 0;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1200px) {
+  .about .about-image {
+    right: 0;
+    width: 320px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1370px) {
+  .about .about-image {
+    right: 0;
   }
 }
 
@@ -1786,6 +1798,7 @@ a {
 }
 .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content {
   max-width: 320px;
+  margin-right: 10px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-content {
@@ -1841,6 +1854,44 @@ a {
   .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-desc p {
     font-size: 10px;
     max-width: 180px;
+  }
+}
+.profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-desc ul {
+  max-width: 327px;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-desc ul {
+    max-width: 180px;
+    padding-left: 20px;
+  }
+}
+.profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-desc ul li {
+  font-family: "Source Serif 4", serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title .profile-hero-title-right .profile-hero-title-desc ul li {
+    font-size: 10px;
+    max-width: 180px;
+  }
+}
+.profile-hero .profile-hero-title-compact {
+  padding: 80px 0 20px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title-compact {
+    padding: 80px 0 0 0;
+  }
+}
+.profile-hero .profile-hero-title-semicompact {
+  padding: 120px 0 20px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-title-semicompact {
+    padding: 80px 0 0 0;
   }
 }
 .profile-hero .profile-hero-academic {
@@ -1950,6 +2001,24 @@ a {
     padding: 20px 0;
   }
 }
+.profile-hero .profile-hero-academic-compact {
+  min-height: auto;
+  padding: 20px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic-compact {
+    padding: 20px 0;
+  }
+}
+.profile-hero .profile-hero-academic-semicompact {
+  min-height: auto;
+  padding: 40px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-hero .profile-hero-academic-semicompact {
+    padding: 20px 0;
+  }
+}
 .profile-hero .profile-hero-image {
   position: absolute;
   display: block;
@@ -1987,4 +2056,10 @@ a {
   color: #FFFFFF;
   text-align: center;
   max-width: 450px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .profile-contact p {
+    font-size: 20px;
+    max-width: 250px;
+  }
 }/*# sourceMappingURL=style.css.map */
